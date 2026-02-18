@@ -1,4 +1,0 @@
--c requirements/constraints.txt
-
-keyring
-artifacts-keyring

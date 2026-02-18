@@ -1,0 +1,26 @@
+# Ignore all markdown files
+*.md
+
+# Keep README.md visible (essential for GitHub repo presentation)
+!README.md
+
+# Standard Python ignores
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+env/
+
+# Standard Node ignores
+node_modules/
+npm-debug.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db

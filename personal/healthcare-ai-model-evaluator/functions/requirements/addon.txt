@@ -1,3 +1,0 @@
-# Addon requirements placeholder
-# This file will be overwritten when packaging addons
-# with their specific requirements.txt content
