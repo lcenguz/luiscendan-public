@@ -1,0 +1,40 @@
+Google Gemini Nano Banana pro 3.0
+
+Prompt
+
+{
+    "subject": {
+        "type": "chibi-style 3D character",
+        "gender": "female",
+        "features": {
+            "hair": "pastel pink bob cut with soft bangs, stylized 3D strands",
+            "eyes": "large expressive dark eyes, looking upward and to the side",
+            "expression": "dreamy, slightly surprised, open mouth",
+            "skin": "fair with soft pink blush on cheeks",
+            "accessories": [
+                "small gold hoop earrings",
+                "delicate gold necklace with heart pendant"
+            ]
+        },
+        "outfit": {
+            "top": "tight-fitting dark brown long-sleeved crop top",
+            "bottom": "high-waisted peach-colored joggers or harem pants",
+            "shoes": "brown and tan platform sneakers"
+        }
+    },
+    "art_style": {
+        "type": "3D render / C4D / Octane Render",
+        "aesthetic": "soft claymorphism, smooth textures, toy-like aesthetic",
+        "lighting": "soft cinematic lighting, warm sunlight, gentle shadows",
+        "camera": "full body shot, eye-level, shallow depth of field (bokeh)"
+    },
+    "environment": {
+        "background": "blurred Mediterranean-style street, soft orange and cream buildings, arched doorway",
+        "color_palette": [
+            "pastel pink",
+            "peach",
+            "warm brown",
+            "cream"
+        ]
+    }
+}

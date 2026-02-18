@@ -1,0 +1,501 @@
+nombre,precio
+Manzana Golden kg,2.03
+Platano kg,1.53
+Naranja kg,1.85
+Tomate kg,2.32
+Lechuga unidad,0.78
+Zanahoria kg,1.27
+Patata kg,0.99
+Cebolla kg,1.23
+Pimiento rojo kg,2.64
+Pepino unidad,0.72
+Brocoli kg,2.19
+Coliflor unidad,2.21
+Pechuga pollo kg,5.25
+Carne picada ternera kg,7.5
+Filete cerdo kg,5.44
+Merluza kg,9.89
+Salmon kg,12.91
+Atun fresco kg,8.69
+Jamon serrano 100g,3.46
+Leche entera 1L,0.86
+Yogur natural pack 4,1.57
+Queso manchego 250g,4.42
+Mantequilla 250g,2.68
+Nata cocinar 200ml,0.99
+Huevos docena,2.4
+Pan barra 250g,0.69
+Croissant unidad,1.13
+Magdalenas pack 6,2.01
+Galletas Maria 800g,1.83
+Arroz 1kg,1.49
+Pasta 500g,0.79
+Aceite oliva 1L,5.6
+Tomate frito 400g,1.08
+Atun lata 3pack,3.13
+Lentejas bote 500g,1.23
+Garbanzos bote 500g,1.27
+Agua mineral 1.5L,0.33
+Coca Cola 2L,2.06
+Zumo naranja 1L,1.43
+Cerveza pack 6,3.42
+Vino tinto botella,5.66
+Cafe molido 250g,3.02
+Detergente lavadora 40 dosis,8.88
+Suavizante 1.5L,3.26
+Lavavajillas 1L,1.95
+Lejia 2L,1.52
+Fregasuelos 1.5L,2.71
+Papel cocina 3 rollos,3.43
+Papel higienico 12 rollos,6.44
+Servilletas pack 100,1.27
+Gel ducha 750ml,2.32
+Champu 400ml,4.54
+Pasta dientes 75ml,2.26
+Desodorante spray,2.57
+Jabon manos 300ml,1.54
+Crema hidratante 400ml,4.68
+Cuchillas afeitar pack 4,5.47
+Compresas pack 24,3.65
+Panales talla 4 pack 40,14.88
+Toallitas bebe pack 3,5.48
+Leche bebe 800g,14.83
+Potito verduras unidad,1.39
+Sarten antiadherente 24cm,11.47
+Olla express 6L,44.06
+Juego cuchillos 5 piezas,18.58
+Tabla cortar,7.78
+Tupper pack 3,4.54
+Vasos cristal pack 6,9.41
+Platos porcelana pack 6,13.08
+Cubiertos set 24 piezas,16.35
+Toalla bano 70x140,9.46
+Sabanas 90cm,16.52
+Funda nordica 150cm,26.98
+Almohada fibra,7.28
+Manta polar,14.17
+Alfombra bano,6.96
+Auriculares bluetooth,32.06
+Cable USB-C 2m,10.39
+Raton inalambrico,16.14
+Teclado USB,17.75
+Memoria USB 32GB,12.4
+Cargador movil,15.66
+Powerbank 10000mAh,26.71
+Funda tablet 10 pulgadas,12.07
+Altavoz bluetooth portatil,30.1
+Webcam HD,40.43
+Batidora mano 600W,22.03
+Tostadora 2 ranuras,22.61
+Cafetera goteo 12 tazas,31.83
+Plancha vapor 2400W,31.13
+Secador pelo 2000W,24.6
+Bascula cocina digital,13.06
+Pienso perro 3kg,11.22
+Pienso gato 2kg,11.38
+Arena gato 5L,5.04
+Snacks perro,3.95
+Correa perro,7.94
+Comedero doble,8.66
+Maceta plastico 30cm,5.69
+Tierra plantas 20L,6.79
+Semillas tomate,1.97
+Regadera 5L,6.17
+Guantes jardin,3.45
+Manguera 15m,18.33
+Boligrafo pack 10,3.04
+Cuaderno A4 80 hojas,2.14
+Archivador carton,2.55
+Tijeras oficina,3.23
+Pegamento barra,1.3
+Rotuladores pack 12,4.71
+Puzzle 1000 piezas,13.41
+Pelota futbol,10.97
+Muneca 30cm,15.39
+Coche teledirigido,25.26
+Juego mesa familiar,20.47
+Peluche osito,14.07
+Manzana Golden kg v2,2.04
+Platano kg v2,1.5
+Naranja kg v2,1.97
+Tomate kg v2,2.73
+Lechuga unidad v2,1.01
+Zanahoria kg v2,1.18
+Patata kg v2,0.99
+Cebolla kg v2,1.26
+Pimiento rojo kg v2,3.35
+Pepino unidad v2,0.75
+Brocoli kg v2,2.43
+Coliflor unidad v2,2.16
+Pechuga pollo kg v2,5.16
+Carne picada ternera kg v2,8.38
+Filete cerdo kg v2,4.25
+Merluza kg v2,9.44
+Salmon kg v2,12.12
+Atun fresco kg v2,11.21
+Jamon serrano 100g v2,3.38
+Leche entera 1L v2,0.87
+Yogur natural pack 4 v2,1.59
+Queso manchego 250g v2,5.08
+Mantequilla 250g v2,2.61
+Nata cocinar 200ml v2,0.87
+Huevos docena v2,2.3
+Pan barra 250g v2,0.64
+Croissant unidad v2,0.9
+Magdalenas pack 6 v2,1.97
+Galletas Maria 800g v2,1.7
+Arroz 1kg v2,1.46
+Pasta 500g v2,0.95
+Aceite oliva 1L v2,4.38
+Tomate frito 400g v2,1.08
+Atun lata 3pack v2,3.36
+Lentejas bote 500g v2,1.33
+Garbanzos bote 500g v2,1.12
+Agua mineral 1.5L v2,0.32
+Coca Cola 2L v2,2.21
+Zumo naranja 1L v2,1.44
+Cerveza pack 6 v2,4.57
+Vino tinto botella v2,4.93
+Cafe molido 250g v2,3.73
+Detergente lavadora 40 dosis v2,7.93
+Suavizante 1.5L v2,3.1
+Lavavajillas 1L v2,2.21
+Lejia 2L v2,1.41
+Fregasuelos 1.5L v2,2.85
+Papel cocina 3 rollos v2,3.98
+Papel higienico 12 rollos v2,5.93
+Servilletas pack 100 v2,1.3
+Gel ducha 750ml v2,2.35
+Champu 400ml v2,3.57
+Pasta dientes 75ml v2,1.9
+Desodorante spray v2,2.45
+Jabon manos 300ml v2,1.59
+Crema hidratante 400ml v2,5.2
+Cuchillas afeitar pack 4 v2,5.61
+Compresas pack 24 v2,3.76
+Panales talla 4 pack 40 v2,14.4
+Toallitas bebe pack 3 v2,5.09
+Leche bebe 800g v2,13.42
+Potito verduras unidad v2,1.48
+Sarten antiadherente 24cm v2,12.4
+Olla express 6L v2,39.85
+Juego cuchillos 5 piezas v2,18.12
+Tabla cortar v2,8.85
+Tupper pack 3 v2,5.51
+Vasos cristal pack 6 v2,9.72
+Platos porcelana pack 6 v2,14.13
+Cubiertos set 24 piezas v2,16.27
+Toalla bano 70x140 v2,9.84
+Sabanas 90cm v2,15.92
+Funda nordica 150cm v2,24.78
+Almohada fibra v2,7.94
+Manta polar v2,12.56
+Alfombra bano v2,6.83
+Auriculares bluetooth v2,27.62
+Cable USB-C 2m v2,11.39
+Raton inalambrico v2,16.4
+Teclado USB v2,18.17
+Memoria USB 32GB v2,11.69
+Cargador movil v2,14.84
+Powerbank 10000mAh v2,25.8
+Funda tablet 10 pulgadas v2,11.71
+Altavoz bluetooth portatil v2,35.11
+Webcam HD v2,36.76
+Batidora mano 600W v2,26.82
+Tostadora 2 ranuras v2,19.64
+Cafetera goteo 12 tazas v2,29.81
+Plancha vapor 2400W v2,31.05
+Secador pelo 2000W v2,26.64
+Bascula cocina digital v2,13.21
+Pienso perro 3kg v2,12.43
+Pienso gato 2kg v2,9.27
+Arena gato 5L v2,4.72
+Snacks perro v2,2.98
+Correa perro v2,7.95
+Comedero doble v2,8.65
+Maceta plastico 30cm v2,4.95
+Tierra plantas 20L v2,6.01
+Semillas tomate v2,2.21
+Regadera 5L v2,6.46
+Guantes jardin v2,3.83
+Manguera 15m v2,18.87
+Boligrafo pack 10 v2,3.33
+Cuaderno A4 80 hojas v2,2.18
+Archivador carton v2,2.67
+Tijeras oficina v2,3.09
+Pegamento barra v2,1.12
+Rotuladores pack 12 v2,5.62
+Puzzle 1000 piezas v2,11.13
+Pelota futbol v2,8.54
+Muneca 30cm v2,17.21
+Coche teledirigido v2,26.81
+Juego mesa familiar v2,18.69
+Peluche osito v2,14.18
+Manzana Golden kg v3,2.18
+Platano kg v3,1.68
+Naranja kg v3,1.98
+Tomate kg v3,2.53
+Lechuga unidad v3,0.98
+Zanahoria kg v3,1.46
+Patata kg v3,0.9
+Cebolla kg v3,1.33
+Pimiento rojo kg v3,3.1
+Pepino unidad v3,0.86
+Brocoli kg v3,2.47
+Coliflor unidad v3,2.28
+Pechuga pollo kg v3,6.18
+Carne picada ternera kg v3,7.31
+Filete cerdo kg v3,4.76
+Merluza kg v3,8.77
+Salmon kg v3,12.48
+Atun fresco kg v3,9.08
+Jamon serrano 100g v3,3.5
+Leche entera 1L v3,0.99
+Yogur natural pack 4 v3,1.33
+Queso manchego 250g v3,5.11
+Mantequilla 250g v3,2.14
+Nata cocinar 200ml v3,0.86
+Huevos docena v3,2.14
+Pan barra 250g v3,0.59
+Croissant unidad v3,0.96
+Magdalenas pack 6 v3,1.99
+Galletas Maria 800g v3,2.28
+Arroz 1kg v3,1.32
+Pasta 500g v3,0.86
+Aceite oliva 1L v3,4.54
+Tomate frito 400g v3,1.06
+Atun lata 3pack v3,3.29
+Lentejas bote 500g v3,1.12
+Garbanzos bote 500g v3,1.45
+Agua mineral 1.5L v3,0.38
+Coca Cola 2L v3,2.13
+Zumo naranja 1L v3,1.69
+Cerveza pack 6 v3,3.43
+Vino tinto botella v3,5.36
+Cafe molido 250g v3,3.9
+Detergente lavadora 40 dosis v3,9.81
+Suavizante 1.5L v3,3.05
+Lavavajillas 1L v3,1.69
+Lejia 2L v3,1.46
+Fregasuelos 1.5L v3,2.46
+Papel cocina 3 rollos v3,3.41
+Papel higienico 12 rollos v3,6.58
+Servilletas pack 100 v3,1.11
+Gel ducha 750ml v3,2.27
+Champu 400ml v3,4.03
+Pasta dientes 75ml v3,2.09
+Desodorante spray v3,2.49
+Jabon manos 300ml v3,1.58
+Crema hidratante 400ml v3,5.06
+Cuchillas afeitar pack 4 v3,6.77
+Compresas pack 24 v3,3.02
+Panales talla 4 pack 40 v3,13.93
+Toallitas bebe pack 3 v3,4.54
+Leche bebe 800g v3,15.27
+Potito verduras unidad v3,1.34
+Sarten antiadherente 24cm v3,11.1
+Olla express 6L v3,39.7
+Juego cuchillos 5 piezas v3,17.55
+Tabla cortar v3,7.82
+Tupper pack 3 v3,4.24
+Vasos cristal pack 6 v3,7.93
+Platos porcelana pack 6 v3,14.53
+Cubiertos set 24 piezas v3,17.94
+Toalla bano 70x140 v3,10.13
+Sabanas 90cm v3,14.97
+Funda nordica 150cm v3,25.03
+Almohada fibra v3,7.28
+Manta polar v3,13.53
+Alfombra bano v3,6.52
+Auriculares bluetooth v3,33.16
+Cable USB-C 2m v3,11.35
+Raton inalambrico v3,15.15
+Teclado USB v3,17.27
+Memoria USB 32GB v3,13.42
+Cargador movil v3,14.52
+Powerbank 10000mAh v3,21.38
+Funda tablet 10 pulgadas v3,12.34
+Altavoz bluetooth portatil v3,36.61
+Webcam HD v3,41.48
+Batidora mano 600W v3,27.1
+Tostadora 2 ranuras v3,17.01
+Cafetera goteo 12 tazas v3,26.73
+Plancha vapor 2400W v3,34.67
+Secador pelo 2000W v3,22.05
+Bascula cocina digital v3,16.72
+Pienso perro 3kg v3,12.67
+Pienso gato 2kg v3,9.6
+Arena gato 5L v3,4.33
+Snacks perro v3,3.37
+Correa perro v3,8.64
+Comedero doble v3,9.17
+Maceta plastico 30cm v3,4.69
+Tierra plantas 20L v3,5.67
+Semillas tomate v3,2.16
+Regadera 5L v3,6.3
+Guantes jardin v3,4.16
+Manguera 15m v3,19.9
+Boligrafo pack 10 v3,3.27
+Cuaderno A4 80 hojas v3,1.83
+Archivador carton v3,2.35
+Tijeras oficina v3,3.52
+Pegamento barra v3,1.45
+Rotuladores pack 12 v3,4.39
+Puzzle 1000 piezas v3,13.6
+Pelota futbol v3,9.63
+Muneca 30cm v3,13.15
+Coche teledirigido v3,21.58
+Juego mesa familiar v3,18.96
+Peluche osito v3,11.47
+Manzana Golden kg v4,1.76
+Platano kg v4,1.32
+Naranja kg v4,2.01
+Tomate kg v4,2.6
+Lechuga unidad v4,1.0
+Zanahoria kg v4,1.28
+Patata kg v4,0.87
+Cebolla kg v4,1.19
+Pimiento rojo kg v4,3.23
+Pepino unidad v4,0.79
+Brocoli kg v4,2.2
+Coliflor unidad v4,2.2
+Pechuga pollo kg v4,5.83
+Carne picada ternera kg v4,7.53
+Filete cerdo kg v4,4.29
+Merluza kg v4,7.79
+Salmon kg v4,11.9
+Atun fresco kg v4,10.91
+Jamon serrano 100g v4,3.24
+Leche entera 1L v4,0.91
+Yogur natural pack 4 v4,1.37
+Queso manchego 250g v4,5.42
+Mantequilla 250g v4,2.67
+Nata cocinar 200ml v4,0.83
+Huevos docena v4,2.33
+Pan barra 250g v4,0.56
+Croissant unidad v4,0.88
+Magdalenas pack 6 v4,2.01
+Galletas Maria 800g v4,2.01
+Arroz 1kg v4,1.67
+Pasta 500g v4,0.81
+Aceite oliva 1L v4,4.62
+Tomate frito 400g v4,1.06
+Atun lata 3pack v4,3.05
+Lentejas bote 500g v4,1.36
+Garbanzos bote 500g v4,1.1
+Agua mineral 1.5L v4,0.38
+Coca Cola 2L v4,1.89
+Zumo naranja 1L v4,1.53
+Cerveza pack 6 v4,4.39
+Vino tinto botella v4,5.67
+Cafe molido 250g v4,3.7
+Detergente lavadora 40 dosis v4,10.22
+Suavizante 1.5L v4,3.34
+Lavavajillas 1L v4,1.7
+Lejia 2L v4,1.32
+Fregasuelos 1.5L v4,2.61
+Papel cocina 3 rollos v4,3.02
+Papel higienico 12 rollos v4,5.25
+Servilletas pack 100 v4,1.22
+Gel ducha 750ml v4,2.19
+Champu 400ml v4,4.3
+Pasta dientes 75ml v4,1.94
+Desodorante spray v4,2.79
+Jabon manos 300ml v4,1.7
+Crema hidratante 400ml v4,5.56
+Cuchillas afeitar pack 4 v4,6.25
+Compresas pack 24 v4,3.94
+Panales talla 4 pack 40 v4,14.37
+Toallitas bebe pack 3 v4,5.62
+Leche bebe 800g v4,16.47
+Potito verduras unidad v4,1.22
+Sarten antiadherente 24cm v4,13.17
+Olla express 6L v4,44.43
+Juego cuchillos 5 piezas v4,22.87
+Tabla cortar v4,6.84
+Tupper pack 3 v4,5.51
+Vasos cristal pack 6 v4,9.27
+Platos porcelana pack 6 v4,15.82
+Cubiertos set 24 piezas v4,17.91
+Toalla bano 70x140 v4,10.82
+Sabanas 90cm v4,14.59
+Funda nordica 150cm v4,25.7
+Almohada fibra v4,7.89
+Manta polar v4,12.35
+Alfombra bano v4,6.02
+Auriculares bluetooth v4,29.96
+Cable USB-C 2m v4,10.31
+Raton inalambrico v4,15.37
+Teclado USB v4,19.54
+Memoria USB 32GB v4,12.99
+Cargador movil v4,14.61
+Powerbank 10000mAh v4,22.8
+Funda tablet 10 pulgadas v4,14.47
+Altavoz bluetooth portatil v4,30.16
+Webcam HD v4,45.82
+Batidora mano 600W v4,25.97
+Tostadora 2 ranuras v4,20.63
+Cafetera goteo 12 tazas v4,29.61
+Plancha vapor 2400W v4,39.0
+Secador pelo 2000W v4,26.53
+Bascula cocina digital v4,12.95
+Pienso perro 3kg v4,12.99
+Pienso gato 2kg v4,8.58
+Arena gato 5L v4,5.34
+Snacks perro v4,3.64
+Correa perro v4,8.1
+Comedero doble v4,10.26
+Maceta plastico 30cm v4,4.46
+Tierra plantas 20L v4,5.76
+Semillas tomate v4,1.74
+Regadera 5L v4,7.07
+Guantes jardin v4,4.03
+Manguera 15m v4,21.55
+Boligrafo pack 10 v4,3.28
+Cuaderno A4 80 hojas v4,1.96
+Archivador carton v4,2.69
+Tijeras oficina v4,3.72
+Pegamento barra v4,1.15
+Rotuladores pack 12 v4,4.4
+Puzzle 1000 piezas v4,13.03
+Pelota futbol v4,8.94
+Muneca 30cm v4,13.6
+Coche teledirigido v4,25.3
+Juego mesa familiar v4,22.24
+Peluche osito v4,12.79
+Manzana Golden kg v5,1.87
+Platano kg v5,1.58
+Naranja kg v5,1.98
+Tomate kg v5,2.26
+Lechuga unidad v5,0.79
+Zanahoria kg v5,1.34
+Patata kg v5,0.88
+Cebolla kg v5,1.15
+Pimiento rojo kg v5,2.8
+Pepino unidad v5,0.78
+Brocoli kg v5,2.74
+Coliflor unidad v5,2.18
+Pechuga pollo kg v5,6.14
+Carne picada ternera kg v5,7.13
+Filete cerdo kg v5,5.16
+Merluza kg v5,10.05
+Salmon kg v5,13.44
+Atun fresco kg v5,9.97
+Jamon serrano 100g v5,3.12
+Leche entera 1L v5,0.97
+Yogur natural pack 4 v5,1.28
+Queso manchego 250g v5,4.66
+Mantequilla 250g v5,2.39
+Nata cocinar 200ml v5,0.86
+Huevos docena v5,2.11
+Pan barra 250g v5,0.6
+Croissant unidad v5,1.03
+Magdalenas pack 6 v5,1.79
+Galletas Maria 800g v5,2.09
+Arroz 1kg v5,1.64
+Pasta 500g v5,0.8
+Aceite oliva 1L v5,5.22
+Tomate frito 400g v5,1.1
+Atun lata 3pack v5,3.31
+Lentejas bote 500g v5,1.13
+Garbanzos bote 500g v5,1.16

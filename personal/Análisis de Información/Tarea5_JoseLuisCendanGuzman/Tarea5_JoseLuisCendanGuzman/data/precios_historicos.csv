@@ -1,0 +1,235 @@
+Fecha,ID_Producto,ID_Supermercado,Precio,Nombre_Producto,Nombre_Supermercado
+2025-02-07,1,1,1.11,Leche Entera,GADIS
+2025-02-07,1,2,1.2,Leche Entera,MERCADONA
+2025-02-07,1,3,1.0,Leche Entera,EROSKI
+2025-02-07,2,1,1.48,Pan de Molde,GADIS
+2025-02-07,2,2,1.38,Pan de Molde,MERCADONA
+2025-02-07,2,3,1.54,Pan de Molde,EROSKI
+2025-02-07,3,1,2.34,Huevos L (12),GADIS
+2025-02-07,3,2,2.29,Huevos L (12),MERCADONA
+2025-02-07,3,3,2.44,Huevos L (12),EROSKI
+2025-02-07,4,1,5.18,Aceite de Oliva Virgen Extra,GADIS
+2025-02-07,4,2,5.39,Aceite de Oliva Virgen Extra,MERCADONA
+2025-02-07,4,3,8.14,Aceite de Oliva Virgen Extra,EROSKI
+2025-02-07,5,1,1.78,Arroz Redondo,GADIS
+2025-02-07,5,2,1.7,Arroz Redondo,MERCADONA
+2025-02-07,5,3,1.97,Arroz Redondo,EROSKI
+2025-02-07,6,1,4.19,Pechuga de Pollo,GADIS
+2025-02-07,6,2,4.65,Pechuga de Pollo,MERCADONA
+2025-02-07,6,3,5.18,Pechuga de Pollo,EROSKI
+2025-03-09,1,1,1.25,Leche Entera,GADIS
+2025-03-09,1,2,1.09,Leche Entera,MERCADONA
+2025-03-09,1,3,1.16,Leche Entera,EROSKI
+2025-03-09,2,1,1.43,Pan de Molde,GADIS
+2025-03-09,2,2,1.57,Pan de Molde,MERCADONA
+2025-03-09,2,3,1.55,Pan de Molde,EROSKI
+2025-03-09,3,1,2.66,Huevos L (12),GADIS
+2025-03-09,3,2,3.14,Huevos L (12),MERCADONA
+2025-03-09,3,3,2.93,Huevos L (12),EROSKI
+2025-03-09,4,1,5.93,Aceite de Oliva Virgen Extra,GADIS
+2025-03-09,4,2,7.26,Aceite de Oliva Virgen Extra,MERCADONA
+2025-03-09,4,3,7.6,Aceite de Oliva Virgen Extra,EROSKI
+2025-03-09,5,1,1.6,Arroz Redondo,GADIS
+2025-03-09,5,2,1.5,Arroz Redondo,MERCADONA
+2025-03-09,5,3,1.66,Arroz Redondo,EROSKI
+2025-03-09,6,1,5.27,Pechuga de Pollo,GADIS
+2025-03-09,6,2,5.29,Pechuga de Pollo,MERCADONA
+2025-03-09,6,3,3.96,Pechuga de Pollo,EROSKI
+2025-04-08,1,1,1.23,Leche Entera,GADIS
+2025-04-08,1,2,1.23,Leche Entera,MERCADONA
+2025-04-08,1,3,1.35,Leche Entera,EROSKI
+2025-04-08,2,1,1.42,Pan de Molde,GADIS
+2025-04-08,2,2,1.39,Pan de Molde,MERCADONA
+2025-04-08,2,3,1.56,Pan de Molde,EROSKI
+2025-04-08,3,1,2.89,Huevos L (12),GADIS
+2025-04-08,3,2,2.57,Huevos L (12),MERCADONA
+2025-04-08,3,3,2.33,Huevos L (12),EROSKI
+2025-04-08,4,1,4.57,Aceite de Oliva Virgen Extra,GADIS
+2025-04-08,4,2,4.11,Aceite de Oliva Virgen Extra,MERCADONA
+2025-04-08,4,3,7.87,Aceite de Oliva Virgen Extra,EROSKI
+2025-04-08,5,1,1.56,Arroz Redondo,GADIS
+2025-04-08,5,2,1.6,Arroz Redondo,MERCADONA
+2025-04-08,5,3,1.85,Arroz Redondo,EROSKI
+2025-04-08,6,1,5.43,Pechuga de Pollo,GADIS
+2025-04-08,6,2,5.01,Pechuga de Pollo,MERCADONA
+2025-04-08,6,3,5.24,Pechuga de Pollo,EROSKI
+2025-05-08,1,1,0.98,Leche Entera,GADIS
+2025-05-08,1,2,1.18,Leche Entera,MERCADONA
+2025-05-08,1,3,1.22,Leche Entera,EROSKI
+2025-05-08,2,1,1.49,Pan de Molde,GADIS
+2025-05-08,2,2,1.53,Pan de Molde,MERCADONA
+2025-05-08,2,3,1.44,Pan de Molde,EROSKI
+2025-05-08,3,1,2.61,Huevos L (12),GADIS
+2025-05-08,3,2,2.34,Huevos L (12),MERCADONA
+2025-05-08,3,3,3.4,Huevos L (12),EROSKI
+2025-05-08,4,1,5.45,Aceite de Oliva Virgen Extra,GADIS
+2025-05-08,4,2,6.11,Aceite de Oliva Virgen Extra,MERCADONA
+2025-05-08,4,3,5.94,Aceite de Oliva Virgen Extra,EROSKI
+2025-05-08,5,1,1.76,Arroz Redondo,GADIS
+2025-05-08,5,2,1.61,Arroz Redondo,MERCADONA
+2025-05-08,5,3,1.72,Arroz Redondo,EROSKI
+2025-05-08,6,1,5.4,Pechuga de Pollo,GADIS
+2025-05-08,6,2,5.18,Pechuga de Pollo,MERCADONA
+2025-05-08,6,3,4.39,Pechuga de Pollo,EROSKI
+2025-06-07,1,1,1.35,Leche Entera,GADIS
+2025-06-07,1,2,1.07,Leche Entera,MERCADONA
+2025-06-07,1,3,1.21,Leche Entera,EROSKI
+2025-06-07,2,1,1.53,Pan de Molde,GADIS
+2025-06-07,2,2,1.51,Pan de Molde,MERCADONA
+2025-06-07,2,3,1.3,Pan de Molde,EROSKI
+2025-06-07,3,1,2.42,Huevos L (12),GADIS
+2025-06-07,3,2,2.6,Huevos L (12),MERCADONA
+2025-06-07,3,3,2.3,Huevos L (12),EROSKI
+2025-06-07,4,1,7.74,Aceite de Oliva Virgen Extra,GADIS
+2025-06-07,4,2,6.39,Aceite de Oliva Virgen Extra,MERCADONA
+2025-06-07,4,3,7.42,Aceite de Oliva Virgen Extra,EROSKI
+2025-06-07,5,1,1.72,Arroz Redondo,GADIS
+2025-06-07,5,2,1.77,Arroz Redondo,MERCADONA
+2025-06-07,5,3,2.3,Arroz Redondo,EROSKI
+2025-06-07,6,1,5.1,Pechuga de Pollo,GADIS
+2025-06-07,6,2,4.88,Pechuga de Pollo,MERCADONA
+2025-06-07,6,3,5.05,Pechuga de Pollo,EROSKI
+2025-07-07,1,1,1.3,Leche Entera,GADIS
+2025-07-07,1,2,1.45,Leche Entera,MERCADONA
+2025-07-07,1,3,1.21,Leche Entera,EROSKI
+2025-07-07,2,1,1.39,Pan de Molde,GADIS
+2025-07-07,2,2,1.46,Pan de Molde,MERCADONA
+2025-07-07,2,3,1.48,Pan de Molde,EROSKI
+2025-07-07,3,1,2.98,Huevos L (12),GADIS
+2025-07-07,3,2,2.69,Huevos L (12),MERCADONA
+2025-07-07,3,3,2.54,Huevos L (12),EROSKI
+2025-07-07,4,1,6.44,Aceite de Oliva Virgen Extra,GADIS
+2025-07-07,4,2,7.76,Aceite de Oliva Virgen Extra,MERCADONA
+2025-07-07,4,3,4.31,Aceite de Oliva Virgen Extra,EROSKI
+2025-07-07,5,1,1.66,Arroz Redondo,GADIS
+2025-07-07,5,2,1.72,Arroz Redondo,MERCADONA
+2025-07-07,5,3,1.76,Arroz Redondo,EROSKI
+2025-07-07,6,1,4.48,Pechuga de Pollo,GADIS
+2025-07-07,6,2,5.26,Pechuga de Pollo,MERCADONA
+2025-07-07,6,3,5.94,Pechuga de Pollo,EROSKI
+2025-08-06,1,1,1.27,Leche Entera,GADIS
+2025-08-06,1,2,1.3,Leche Entera,MERCADONA
+2025-08-06,1,3,1.01,Leche Entera,EROSKI
+2025-08-06,2,1,1.43,Pan de Molde,GADIS
+2025-08-06,2,2,1.6,Pan de Molde,MERCADONA
+2025-08-06,2,3,1.58,Pan de Molde,EROSKI
+2025-08-06,3,1,2.87,Huevos L (12),GADIS
+2025-08-06,3,2,3.42,Huevos L (12),MERCADONA
+2025-08-06,3,3,2.44,Huevos L (12),EROSKI
+2025-08-06,4,1,6.24,Aceite de Oliva Virgen Extra,GADIS
+2025-08-06,4,2,6.34,Aceite de Oliva Virgen Extra,MERCADONA
+2025-08-06,4,3,6.79,Aceite de Oliva Virgen Extra,EROSKI
+2025-08-06,5,1,1.78,Arroz Redondo,GADIS
+2025-08-06,5,2,1.73,Arroz Redondo,MERCADONA
+2025-08-06,5,3,1.92,Arroz Redondo,EROSKI
+2025-08-06,6,1,4.68,Pechuga de Pollo,GADIS
+2025-08-06,6,2,6.13,Pechuga de Pollo,MERCADONA
+2025-08-06,6,3,5.4,Pechuga de Pollo,EROSKI
+2025-09-05,1,1,1.29,Leche Entera,GADIS
+2025-09-05,1,2,1.28,Leche Entera,MERCADONA
+2025-09-05,1,3,1.5,Leche Entera,EROSKI
+2025-09-05,2,1,1.38,Pan de Molde,GADIS
+2025-09-05,2,2,1.45,Pan de Molde,MERCADONA
+2025-09-05,2,3,1.61,Pan de Molde,EROSKI
+2025-09-05,3,1,2.53,Huevos L (12),GADIS
+2025-09-05,3,2,2.34,Huevos L (12),MERCADONA
+2025-09-05,3,3,2.91,Huevos L (12),EROSKI
+2025-09-05,4,1,5.58,Aceite de Oliva Virgen Extra,GADIS
+2025-09-05,4,2,7.62,Aceite de Oliva Virgen Extra,MERCADONA
+2025-09-05,4,3,6.23,Aceite de Oliva Virgen Extra,EROSKI
+2025-09-05,5,1,1.75,Arroz Redondo,GADIS
+2025-09-05,5,2,1.74,Arroz Redondo,MERCADONA
+2025-09-05,5,3,1.9,Arroz Redondo,EROSKI
+2025-09-05,6,1,5.46,Pechuga de Pollo,GADIS
+2025-09-05,6,2,5.21,Pechuga de Pollo,MERCADONA
+2025-09-05,6,3,5.33,Pechuga de Pollo,EROSKI
+2025-10-05,1,1,1.24,Leche Entera,GADIS
+2025-10-05,1,2,1.37,Leche Entera,MERCADONA
+2025-10-05,1,3,1.42,Leche Entera,EROSKI
+2025-10-05,2,1,1.41,Pan de Molde,GADIS
+2025-10-05,2,2,1.57,Pan de Molde,MERCADONA
+2025-10-05,2,3,1.5,Pan de Molde,EROSKI
+2025-10-05,3,1,2.27,Huevos L (12),GADIS
+2025-10-05,3,2,2.69,Huevos L (12),MERCADONA
+2025-10-05,3,3,2.79,Huevos L (12),EROSKI
+2025-10-05,4,1,6.61,Aceite de Oliva Virgen Extra,GADIS
+2025-10-05,4,2,7.59,Aceite de Oliva Virgen Extra,MERCADONA
+2025-10-05,4,3,7.85,Aceite de Oliva Virgen Extra,EROSKI
+2025-10-05,5,1,1.8,Arroz Redondo,GADIS
+2025-10-05,5,2,1.74,Arroz Redondo,MERCADONA
+2025-10-05,5,3,1.83,Arroz Redondo,EROSKI
+2025-10-05,6,1,4.82,Pechuga de Pollo,GADIS
+2025-10-05,6,2,5.32,Pechuga de Pollo,MERCADONA
+2025-10-05,6,3,5.58,Pechuga de Pollo,EROSKI
+2025-11-04,1,1,1.18,Leche Entera,GADIS
+2025-11-04,1,2,1.35,Leche Entera,MERCADONA
+2025-11-04,1,3,1.25,Leche Entera,EROSKI
+2025-11-04,2,1,1.32,Pan de Molde,GADIS
+2025-11-04,2,2,1.53,Pan de Molde,MERCADONA
+2025-11-04,2,3,1.52,Pan de Molde,EROSKI
+2025-11-04,3,1,3.29,Huevos L (12),GADIS
+2025-11-04,3,2,3.29,Huevos L (12),MERCADONA
+2025-11-04,3,3,3.6,Huevos L (12),EROSKI
+2025-11-04,4,1,7.12,Aceite de Oliva Virgen Extra,GADIS
+2025-11-04,4,2,7.05,Aceite de Oliva Virgen Extra,MERCADONA
+2025-11-04,4,3,5.64,Aceite de Oliva Virgen Extra,EROSKI
+2025-11-04,5,1,1.79,Arroz Redondo,GADIS
+2025-11-04,5,2,1.78,Arroz Redondo,MERCADONA
+2025-11-04,5,3,1.79,Arroz Redondo,EROSKI
+2025-11-04,6,1,5.09,Pechuga de Pollo,GADIS
+2025-11-04,6,2,5.85,Pechuga de Pollo,MERCADONA
+2025-11-04,6,3,4.95,Pechuga de Pollo,EROSKI
+2025-12-04,1,1,1.31,Leche Entera,GADIS
+2025-12-04,1,2,1.24,Leche Entera,MERCADONA
+2025-12-04,1,3,1.34,Leche Entera,EROSKI
+2025-12-04,2,1,1.6,Pan de Molde,GADIS
+2025-12-04,2,2,1.57,Pan de Molde,MERCADONA
+2025-12-04,2,3,1.62,Pan de Molde,EROSKI
+2025-12-04,3,1,3.34,Huevos L (12),GADIS
+2025-12-04,3,2,3.35,Huevos L (12),MERCADONA
+2025-12-04,3,3,3.2,Huevos L (12),EROSKI
+2025-12-04,4,1,7.8,Aceite de Oliva Virgen Extra,GADIS
+2025-12-04,4,2,5.97,Aceite de Oliva Virgen Extra,MERCADONA
+2025-12-04,4,3,10.8,Aceite de Oliva Virgen Extra,EROSKI
+2025-12-04,5,1,1.84,Arroz Redondo,GADIS
+2025-12-04,5,2,1.65,Arroz Redondo,MERCADONA
+2025-12-04,5,3,1.94,Arroz Redondo,EROSKI
+2025-12-04,6,1,4.81,Pechuga de Pollo,GADIS
+2025-12-04,6,2,5.98,Pechuga de Pollo,MERCADONA
+2025-12-04,6,3,6.69,Pechuga de Pollo,EROSKI
+2026-01-03,1,1,1.25,Leche Entera,GADIS
+2026-01-03,1,2,1.21,Leche Entera,MERCADONA
+2026-01-03,1,3,1.21,Leche Entera,EROSKI
+2026-01-03,2,1,1.52,Pan de Molde,GADIS
+2026-01-03,2,2,1.5,Pan de Molde,MERCADONA
+2026-01-03,2,3,1.56,Pan de Molde,EROSKI
+2026-01-03,3,1,2.08,Huevos L (12),GADIS
+2026-01-03,3,2,2.81,Huevos L (12),MERCADONA
+2026-01-03,3,3,2.54,Huevos L (12),EROSKI
+2026-01-03,4,1,7.39,Aceite de Oliva Virgen Extra,GADIS
+2026-01-03,4,2,6.81,Aceite de Oliva Virgen Extra,MERCADONA
+2026-01-03,4,3,5.42,Aceite de Oliva Virgen Extra,EROSKI
+2026-01-03,5,1,1.64,Arroz Redondo,GADIS
+2026-01-03,5,2,1.91,Arroz Redondo,MERCADONA
+2026-01-03,5,3,1.73,Arroz Redondo,EROSKI
+2026-01-03,6,1,5.02,Pechuga de Pollo,GADIS
+2026-01-03,6,2,4.48,Pechuga de Pollo,MERCADONA
+2026-01-03,6,3,4.79,Pechuga de Pollo,EROSKI
+2026-02-02,1,1,1.31,Leche Entera,GADIS
+2026-02-02,1,2,1.34,Leche Entera,MERCADONA
+2026-02-02,1,3,1.35,Leche Entera,EROSKI
+2026-02-02,2,1,1.38,Pan de Molde,GADIS
+2026-02-02,2,2,1.41,Pan de Molde,MERCADONA
+2026-02-02,2,3,1.51,Pan de Molde,EROSKI
+2026-02-02,3,1,3.47,Huevos L (12),GADIS
+2026-02-02,3,2,2.39,Huevos L (12),MERCADONA
+2026-02-02,3,3,3.3,Huevos L (12),EROSKI
+2026-02-02,4,1,6.87,Aceite de Oliva Virgen Extra,GADIS
+2026-02-02,4,2,5.66,Aceite de Oliva Virgen Extra,MERCADONA
+2026-02-02,4,3,4.32,Aceite de Oliva Virgen Extra,EROSKI
+2026-02-02,5,1,1.98,Arroz Redondo,GADIS
+2026-02-02,5,2,1.72,Arroz Redondo,MERCADONA
+2026-02-02,5,3,1.9,Arroz Redondo,EROSKI
+2026-02-02,6,1,4.39,Pechuga de Pollo,GADIS
+2026-02-02,6,2,4.76,Pechuga de Pollo,MERCADONA
+2026-02-02,6,3,4.97,Pechuga de Pollo,EROSKI

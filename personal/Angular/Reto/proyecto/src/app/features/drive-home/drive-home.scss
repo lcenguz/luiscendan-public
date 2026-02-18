@@ -1,0 +1,360 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 60px 20px 40px 20px; // Más espacio arriba
+    width: 100%;
+}
+
+.home-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    position: relative;
+}
+
+// Botones flotantes en esquina superior derecha
+.floating-actions {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1000;
+    animation: fadeInRight 0.6s ease;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Contenido centrado verticalmente
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    text-align: center;
+}
+
+// Info del usuario compacta
+.user-info-compact {
+    color: white;
+    animation: fadeInDown 0.6s ease;
+}
+
+.greeting {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0 0 12px 0;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+    .user-name {
+        font-weight: 700;
+        background: linear-gradient(135deg, #fff 0%, #e3f2fd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+
+    mat-icon {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.intro-message {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-weight: 300;
+}
+
+// GRID DE ICONOS GRANDES - 2 filas x 3 columnas
+.icons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease;
+}
+
+.icon-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 32px 20px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, transparent, currentColor, transparent);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover {
+        transform: translateY(-16px) scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 1);
+        border-color: rgba(255, 255, 255, 0.6);
+
+        &::before {
+            opacity: 1;
+        }
+
+        .big-icon {
+            transform: scale(1.2) rotate(8deg);
+        }
+    }
+}
+
+.icon-wrapper {
+    position: relative;
+}
+
+// ICONOS MUY GRANDES - 120px
+.big-icon {
+    font-size: 120px !important;
+    width: 120px !important;
+    height: 120px !important;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.icon-badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: #f44336;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    min-width: 36px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.5);
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-6px) scale(1.1);
+    }
+}
+
+.icon-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.icon-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+// Notificaciones abajo
+.notifications-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 14px 28px;
+    border-radius: 30px;
+    color: #1565c0;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease;
+
+    mat-icon {
+        color: #1976d2;
+        animation: pulse 2s infinite;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+// Responsive
+@media (max-width: 768px) {
+    :host {
+        padding: 30px 15px;
+    }
+
+    .home-container {
+        padding: 0 10px;
+    }
+
+    .greeting {
+        font-size: 1.8rem;
+    }
+
+    .icons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .big-icon {
+        font-size: 80px !important;
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .icon-card {
+        padding: 24px 16px;
+    }
+
+    .icon-title {
+        font-size: 1.1rem;
+    }
+
+    .icon-description {
+        font-size: 0.85rem;
+    }
+
+    // Mantener 3 columnas en tablet
+    .icons-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    :host {
+        padding: 20px 10px;
+    }
+
+    .home-container {
+        padding: 0 5px;
+    }
+
+    .icons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .greeting {
+        font-size: 1.5rem;
+    }
+
+    .big-icon {
+        font-size: 70px !important;
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    .icon-card {
+        padding: 20px 12px;
+    }
+}

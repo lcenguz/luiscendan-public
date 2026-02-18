@@ -1,0 +1,146 @@
+<div class="shared-container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <mat-icon>share</mat-icon>
+                Documentos Compartidos
+            </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <mat-tab-group>
+                
+                <mat-tab label="Compartidos conmigo">
+                    <div class="tab-content">
+                        @if (sharedWithMeDocuments().length === 0) {
+                        <div class="empty-state">
+                            <mat-icon>folder_shared</mat-icon>
+                            <p>No tienes documentos compartidos contigo</p>
+                        </div>
+                        } @else {
+                        <div class="documents-grid">
+                            @for (doc of sharedWithMeDocuments(); track doc.id) {
+                            <mat-card class="document-card">
+                                <mat-card-header>
+                                    <mat-icon [style.color]="getIconColor(doc.extension)" class="file-icon">
+                                        {{ getFileIcon(doc.extension) }}
+                                    </mat-icon>
+                                    <mat-card-title>{{ doc.displayName }}</mat-card-title>
+                                    <mat-card-subtitle>
+                                        Compartido por: <strong>{{ doc.sharedByName }}</strong>
+                                        <br>
+                                        <small>{{ doc.sharedByEmail }}</small>
+                                    </mat-card-subtitle>
+                                </mat-card-header>
+
+                                <mat-card-content>
+                                    <div class="doc-info">
+                                        <p><strong>Tamaño:</strong> {{ formatSize(doc.size) }}</p>
+                                        @if (doc.description) {
+                                        <p><strong>Descripción:</strong> {{ doc.description }}</p>
+                                        }
+                                        <p><strong>Compartido:</strong> {{ formatDate(doc.permission.grantedAt) }}</p>
+                                    </div>
+
+                                    <div class="permission-badge">
+                                        <app-permission-level-badge [level]="doc.permission.level" />
+                                    </div>
+                                </mat-card-content>
+
+                                <mat-card-actions>
+                                    @if (canView(doc)) {
+                                    <button mat-raised-button color="primary" (click)="openDocument(doc)"
+                                        matTooltip="Ver documento">
+                                        <mat-icon>visibility</mat-icon>
+                                        Ver
+                                    </button>
+                                    }
+                                    @if (canEdit(doc)) {
+                                    <button mat-raised-button color="accent" matTooltip="Editar documento">
+                                        <mat-icon>edit</mat-icon>
+                                        Editar
+                                    </button>
+                                    }
+                                    @if (!canView(doc)) {
+                                    <p class="no-access">
+                                        <mat-icon>block</mat-icon>
+                                        Sin permisos de acceso
+                                    </p>
+                                    }
+                                </mat-card-actions>
+                            </mat-card>
+                            }
+                        </div>
+                        }
+                    </div>
+                </mat-tab>
+
+                <mat-tab label="Compartidos por mí">
+                    <div class="tab-content">
+                        @if (sharedByMeDocuments().length === 0) {
+                        <div class="empty-state">
+                            <mat-icon>share</mat-icon>
+                            <p>No has compartido ningún documento</p>
+                        </div>
+                        } @else {
+                        <div class="documents-list">
+                            @for (doc of sharedByMeDocuments(); track doc.id) {
+                            <mat-card class="document-card-extended">
+                                <mat-card-header>
+                                    <mat-icon [style.color]="getIconColor(doc.extension)" class="file-icon">
+                                        {{ getFileIcon(doc.extension) }}
+                                    </mat-icon>
+                                    <mat-card-title>{{ doc.displayName }}</mat-card-title>
+                                    <mat-card-subtitle>
+                                        {{ formatSize(doc.size) }} • Compartido con {{ doc.sharedWith.length }}
+                                        usuario(s)
+                                    </mat-card-subtitle>
+                                </mat-card-header>
+
+                                <mat-card-content>
+                                    @if (doc.description) {
+                                    <p class="description">{{ doc.description }}</p>
+                                    }
+
+                                    <div class="shared-users-section">
+                                        <h4>
+                                            <mat-icon>people</mat-icon>
+                                            Usuarios con acceso:
+                                        </h4>
+
+                                        <div class="users-list">
+                                            @for (user of doc.sharedWith; track user.userId) {
+                                            <div class="user-permission-row">
+                                                <div class="user-info">
+                                                    <mat-icon>person</mat-icon>
+                                                    <div>
+                                                        <strong>{{ user.userEmail }}</strong>
+                                                        <br>
+                                                        <small>Compartido: {{ formatDate(user.grantedAt) }}</small>
+                                                    </div>
+                                                </div>
+
+                                                <div class="permission-actions">
+                                                    <app-permission-level-badge [level]="user.level" />
+
+                                                    <button mat-icon-button color="warn"
+                                                        (click)="revokePermission(user.permissionId)"
+                                                        matTooltip="Revocar acceso">
+                                                        <mat-icon>remove_circle</mat-icon>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                            }
+                        </div>
+                        }
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </mat-card-content>
+    </mat-card>
+</div>

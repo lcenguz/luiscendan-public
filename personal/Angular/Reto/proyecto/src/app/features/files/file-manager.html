@@ -1,0 +1,336 @@
+<mat-card class="mb-4">
+  <mat-card-title>
+    <div class="d-flex justify-content-between align-items-center">
+      <span>Subida de documentos</span>
+      <button mat-raised-button color="accent" (click)="openCreateFolderDialog()">
+        <mat-icon>create_new_folder</mat-icon>
+        Nueva Carpeta
+      </button>
+    </div>
+  </mat-card-title>
+
+  @if (currentFolderId()) {
+  <div class="folder-breadcrumbs">
+    <button mat-button (click)="currentFolderId.set(undefined)">
+      <mat-icon>home</mat-icon>
+      Raíz
+    </button>
+    @for (folderName of folderPath(); track $index) {
+    <mat-icon class="breadcrumb-separator">chevron_right</mat-icon>
+    <span class="breadcrumb-item">{{ folderName }}</span>
+    }
+    <button mat-icon-button (click)="goToParentFolder()" matTooltip="Volver">
+      <mat-icon>arrow_upward</mat-icon>
+    </button>
+  </div>
+  }
+
+  <mat-card-subtitle>
+    Multi-upload con drag & drop y progreso simulado.
+    <small class="text-muted">
+      <mat-icon class="small-icon">info</mat-icon>
+      Tamaño máximo por archivo: {{ fileService.getMaxSizeMessage() }}
+    </small>
+  </mat-card-subtitle>
+  <mat-card-content>
+
+    <div class="upload-dropzone" [class.upload-dropzone--over]="isDragOver()" (dragover)="onDragOver($event)"
+      (dragleave)="onDragLeave($event)" (drop)="onDrop($event)">
+      <div class="upload-dropzone__content">
+        <mat-icon class="upload-dropzone__icon">cloud_upload</mat-icon>
+        <p class="mb-1">
+          Arrastra y suelta aquí tus ficheros
+        </p>
+        <p class="text-muted mb-2">
+          o haz clic en el botón para seleccionarlos desde tu equipo
+        </p>
+
+        <button mat-stroked-button color="primary" type="button" (click)="fileInput.click()">
+          <mat-icon class="me-1">attach_file</mat-icon>
+          Seleccionar ficheros
+        </button>
+
+        <input #fileInput type="file" multiple hidden (change)="onFileInputChange($event)" />
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <label class="form-label">
+        <mat-icon class="small-icon">folder</mat-icon>
+        Carpeta destino:
+      </label>
+      <select class="form-select" [(ngModel)]="selectedFolderId">
+        <option [value]="undefined">📁 Raíz (sin carpeta)</option>
+        @for (folder of userFolders(); track folder.id) {
+        <option [value]="folder.id">
+          📁 {{ folder.name }}
+          @if (folder.description) {
+          - {{ folder.description }}
+          }
+        </option>
+        }
+      </select>
+      <small class="text-muted">
+        Los archivos heredarán los permisos de la carpeta seleccionada
+      </small>
+    </div>
+
+    <div class="d-flex align-items-center gap-2 mt-3">
+      <button mat-raised-button color="primary" type="button" (click)="onStartUpload()"
+        [disabled]="!hasSelectedFiles()">
+        <mat-icon class="me-1">cloud_upload</mat-icon>
+        Subir {{ selectedFiles().length }} fichero(s)
+      </button>
+
+      <button mat-button type="button" (click)="clearSelectedFiles()" [disabled]="!hasSelectedFiles()">
+        Limpiar selección
+      </button>
+
+      <button mat-button color="warn" type="button" (click)="onResetAllFiles()">
+        Reset documentos
+      </button>
+    </div>
+
+    @if (hasSelectedFiles()) {
+    <div class="mt-3">
+      <h6>Ficheros preparados para subir:</h6>
+      <ul class="list-group">
+        @for (f of selectedFiles(); track f.name) {
+        <li class="list-group-item d-flex justify-content-between align-items-center"
+          [class.list-group-item-danger]="!fileService.validateFileSize(f)">
+          <div class="d-flex align-items-center">
+            <mat-icon [style.color]="getFileIconColor(f.name.split('.').pop() || '')" class="me-2">
+              {{ getFileIcon(f.name.split('.').pop() || '') }}
+            </mat-icon>
+            <div>
+              <strong>{{ f.name }}</strong>
+              @if (!fileService.validateFileSize(f)) {
+              <span class="badge bg-danger ms-2">Demasiado grande</span>
+              }
+              <br />
+              <small [class.text-danger]="!fileService.validateFileSize(f)">
+                {{ fileService.formatSize(f.size) }}
+              </small>
+            </div>
+          </div>
+        </li>
+        }
+      </ul>
+    </div>
+    }
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Documentos subidos</mat-card-title>
+  <mat-card-subtitle>
+    Lista de ficheros gestionados por el servicio (persistidos en localStorage).
+  </mat-card-subtitle>
+
+  <mat-card-content>
+
+    @if (currentFolders().length > 0) {
+    <div class="folders-section mb-4">
+      <h3 class="section-title">
+        <mat-icon>folder</mat-icon>
+        Carpetas ({{ currentFolders().length }})
+      </h3>
+      <div class="folders-grid">
+        @for (folder of currentFolders(); track folder.id) {
+        <div class="folder-card" (click)="openFolder(folder)">
+          <div class="folder-icon" [style.color]="folder.color || '#2196F3'">
+            <mat-icon>folder</mat-icon>
+          </div>
+          <div class="folder-info">
+            <h4 class="folder-name">{{ folder.name }}</h4>
+            @if (folder.description) {
+            <p class="folder-description">{{ folder.description }}</p>
+            }
+          </div>
+          <div class="folder-actions" (click)="$event.stopPropagation()">
+            <button mat-icon-button (click)="openFolderPermissions(folder)" matTooltip="Permisos">
+              <mat-icon>security</mat-icon>
+            </button>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    }
+
+    <div class="mb-3 p-3 border rounded">
+      <div class="row g-2 align-items-end">
+        <div class="col-md-3">
+          <label class="form-label small">Estado</label>
+          <select class="form-select form-select-sm" [value]="filterStatus()"
+            (change)="onStatusFilterChange($any($event.target).value)">
+            <option value="ALL">Todos</option>
+            <option value="UPLOADING">Subiendo</option>
+            <option value="ACTIVE">Activo</option>
+            <option value="ARCHIVED">Archivado</option>
+            <option value="DELETED">Eliminado</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label small">Desde</label>
+          <input type="date" class="form-control form-control-sm" [value]="filterStartDate()"
+            (change)="onStartDateChange($any($event.target).value)">
+        </div>
+        <div class="col-md-3">
+          <label class="form-label small">Hasta</label>
+          <input type="date" class="form-control form-control-sm" [value]="filterEndDate()"
+            (change)="onEndDateChange($any($event.target).value)">
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-sm btn-outline-secondary w-100" (click)="clearFilters()">
+            Limpiar filtros
+          </button>
+        </div>
+      </div>
+      <small class="text-muted d-block mt-2">
+        Mostrando {{ files().length }} archivo(s)
+      </small>
+    </div>
+
+    @if (files().length > 0) {
+    <div class="table-responsive">
+      <table class="table table-sm align-middle">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Ruta</th>
+            <th>Tamaño</th>
+            <th>Estado</th>
+            <th>Progreso</th>
+            <th>Creado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (file of files(); track file.id) {
+          <tr [id]="'file-' + file.id">
+            <td>
+              <div class="d-flex align-items-start">
+                <mat-icon [style.color]="getFileIconColor(file.extension)" class="me-2">
+                  {{ getFileIcon(file.extension) }}
+                </mat-icon>
+                <div>
+                  <strong>{{ file.displayName }}</strong>
+                  @if (file.folderId) {
+                  <app-permission-inheritance-badge [inherited]="hasInheritedPermissions(file)"
+                    [folderName]="getFolderName(file.folderId)" class="ms-2">
+                  </app-permission-inheritance-badge>
+                  }
+                  <br />
+                  <small class="text-muted">{{ file.fileName }}</small>
+                  <br />
+                  @if (file.description) {
+                  <small class="text-muted">
+                    {{ file.description }}
+                  </small>
+                  <br />
+                  }
+                  @if (file.tags.length > 0) {
+                  <small class="text-muted">
+                    Tags:
+                    @for (t of file.tags; track t) {
+                    <span class="badge bg-light text-dark me-1">
+                      {{ t }}
+                    </span>
+                    }
+                  </small>
+                  }
+                </div>
+              </div>
+            </td>
+            <td>
+              <small class="text-muted font-monospace">{{ file.path }}</small>
+            </td>
+            <td>{{ formatSize(file.size) }}</td>
+            <td>
+              <span [class]="statusBadgeClass(file.status)">
+                {{ file.status }}
+              </span>
+              @if (isFileShared(file.id)) {
+              <span class="badge bg-info text-white ms-1" matTooltip="Este archivo está compartido con otros usuarios">
+                <mat-icon class="small-icon">share</mat-icon>
+                Compartido
+              </span>
+              }
+            </td>
+            <td>
+              @if (file.status === 'UPLOADING') {
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" [style.width.%]="file.progress">
+                  {{ file.progress }}%
+                </div>
+              </div>
+              } @else {
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 100%">
+                  100%
+                </div>
+              </div>
+              }
+            </td>
+            <td>{{ formatDate(file.createdAt) }}</td>
+            <td>
+
+              <button mat-icon-button color="primary" (click)="openMetadataDialog(file)" matTooltip="Editar metadatos">
+                <mat-icon>edit</mat-icon>
+              </button>
+
+              @if (file.status !== 'UPLOADING') {
+              <button mat-icon-button color="accent" (click)="downloadFile(file)" matTooltip="Descargar archivo">
+                <mat-icon>download</mat-icon>
+              </button>
+              }
+
+              <button mat-icon-button color="primary" (click)="openVersionHistory(file)"
+                matTooltip="Historial de versiones">
+                <mat-icon>history</mat-icon>
+              </button>
+
+              @if (file.status === 'ACTIVE') {
+              <button mat-icon-button color="accent" (click)="shareFile(file)" matTooltip="Compartir archivo">
+                <mat-icon>share</mat-icon>
+              </button>
+              <button mat-icon-button color="primary" (click)="archiveFile(file)" matTooltip="Archivar">
+                <mat-icon>archive</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="softDeleteFile(file)" matTooltip="Marcar como eliminado">
+                <mat-icon>delete</mat-icon>
+              </button>
+              }
+
+              @if (file.status === 'ARCHIVED') {
+              <button mat-icon-button color="primary" (click)="unarchiveFile(file)" matTooltip="Desarchivar">
+                <mat-icon>unarchive</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="softDeleteFile(file)" matTooltip="Marcar como eliminado">
+                <mat-icon>delete</mat-icon>
+              </button>
+              }
+
+              @if (file.status === 'DELETED') {
+              <button mat-icon-button color="primary" (click)="restoreFile(file)" matTooltip="Restaurar">
+                <mat-icon>restore</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="hardDeleteFile(file)" matTooltip="Eliminar definitivamente">
+                <mat-icon>delete_forever</mat-icon>
+              </button>
+              }
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    } @else {
+    <p class="text-muted mb-0">
+      Todavía no se ha subido ningún documento. Arrastra ficheros a la zona
+      superior o selecciónalos con el botón.
+    </p>
+    }
+  </mat-card-content>
+</mat-card>

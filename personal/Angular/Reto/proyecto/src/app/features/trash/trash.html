@@ -1,0 +1,154 @@
+<mat-card>
+    <mat-card-title>
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <mat-icon class="me-2">delete</mat-icon>
+                Papelera
+            </div>
+            <button mat-raised-button color="warn" (click)="emptyTrash()" [disabled]="deletedFiles().length === 0">
+                <mat-icon class="me-1">delete_forever</mat-icon>
+                Vaciar papelera
+            </button>
+        </div>
+    </mat-card-title>
+
+    <mat-card-subtitle>
+        Archivos eliminados que pueden ser restaurados o eliminados permanentemente.
+        <br>
+        <small class="text-muted">
+            Total: {{ deletedFiles().length }} archivo(s)
+            @if (selectedCount > 0) {
+            <span class="ms-2 badge bg-primary">{{ selectedCount }} seleccionado(s)</span>
+            }
+        </small>
+    </mat-card-subtitle>
+
+    <mat-card-content>
+        
+        <div class="mb-3 p-3 border rounded">
+            <h6>Filtros:</h6>
+            <div class="row g-2">
+                <div class="col-md-4">
+                    <input type="text" class="form-control form-control-sm" placeholder="Buscar por nombre..."
+                        [value]="filterText()" (input)="onFilterTextChange($any($event.target).value)">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select form-select-sm" [value]="filterOwner()"
+                        (change)="onFilterOwnerChange($any($event.target).value)">
+                        <option value="">Todos los propietarios</option>
+                        @for (owner of uniqueOwners(); track owner) {
+                        <option [value]="owner">{{ owner }}</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select form-select-sm" [value]="filterType()"
+                        (change)="onFilterTypeChange($any($event.target).value)">
+                        <option value="">Todos los tipos</option>
+                        @for (type of uniqueTypes(); track type) {
+                        <option [value]="type">.{{ type }}</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-sm btn-outline-secondary w-100" (click)="clearFilters()">
+                        Limpiar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        @if (selectedCount > 0) {
+        <div class="mb-3 d-flex gap-2">
+            <button mat-raised-button color="primary" (click)="restoreSelected()">
+                <mat-icon class="me-1">restore</mat-icon>
+                Restaurar seleccionados ({{ selectedCount }})
+            </button>
+            <button mat-raised-button color="warn" (click)="deleteSelectedPermanently()">
+                <mat-icon class="me-1">delete_forever</mat-icon>
+                Eliminar permanentemente ({{ selectedCount }})
+            </button>
+            <button mat-button (click)="clearSelection()">
+                Cancelar selección
+            </button>
+        </div>
+        }
+
+        @if (deletedFiles().length > 0) {
+        <div class="table-responsive">
+            <table class="table table-sm align-middle">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">
+                            <mat-checkbox [checked]="allSelected" [indeterminate]="selectedCount > 0 && !allSelected"
+                                (change)="allSelected ? clearSelection() : selectAll()">
+                            </mat-checkbox>
+                        </th>
+                        <th>Nombre</th>
+                        <th>Ruta</th>
+                        <th>Tamaño</th>
+                        <th>Eliminado el</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (file of deletedFiles(); track file.id) {
+                    <tr>
+                        <td>
+                            <mat-checkbox [checked]="isSelected(file.id)" (change)="toggleSelection(file.id)">
+                            </mat-checkbox>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-start">
+                                <mat-icon [style.color]="getFileIconColor(file.extension)" class="me-2">
+                                    {{ getFileIcon(file.extension) }}
+                                </mat-icon>
+                                <div>
+                                    <strong>{{ file.displayName }}</strong>
+                                    <br />
+                                    <small class="text-muted">{{ file.fileName }}</small>
+                                    @if (file.description) {
+                                    <br />
+                                    <small class="text-muted">{{ file.description }}</small>
+                                    }
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <small class="text-muted font-monospace">{{ file.path }}</small>
+                        </td>
+                        <td>{{ formatSize(file.size) }}</td>
+                        <td>
+                            <small class="text-muted">{{ formatDate(file.updatedAt) }}</small>
+                        </td>
+                        <td>
+                            <button mat-icon-button color="primary" (click)="restoreFile(file)"
+                                matTooltip="Restaurar archivo">
+                                <mat-icon>restore</mat-icon>
+                            </button>
+                            <button mat-icon-button color="warn" (click)="permanentDelete(file)"
+                                matTooltip="Eliminar permanentemente">
+                                <mat-icon>delete_forever</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        } @else {
+        <div class="text-center py-5">
+            <mat-icon style="font-size: 64px; width: 64px; height: 64px; color: #9E9E9E;">
+                delete_outline
+            </mat-icon>
+            <p class="text-muted mt-3">
+                @if (filterText() || filterOwner() || filterType()) {
+                No se encontraron archivos con estos filtros
+                } @else {
+                La papelera está vacía
+                }
+            </p>
+        </div>
+        }
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,104 @@
+<div class="container py-4">
+    <mat-card>
+        <mat-card-title>
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <mat-icon class="me-2">folder_shared</mat-icon>
+                    Compartido Conmigo
+                </div>
+            </div>
+        </mat-card-title>
+
+        <mat-card-subtitle>
+            Documentos que otros usuarios han compartido contigo
+            <br>
+            <small class="text-muted">Total: {{ sharedDocuments().length }} documento(s)</small>
+        </mat-card-subtitle>
+
+        <mat-card-content>
+            @if (sharedDocuments().length > 0) {
+            <div class="table-responsive">
+                <table class="table table-sm align-middle">
+                    <thead>
+                        <tr>
+                            <th>Documento</th>
+                            <th>Tamaño</th>
+                            <th>Compartido por</th>
+                            <th>Permiso</th>
+                            <th>Tipo</th>
+                            <th>Fecha</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (doc of sharedDocuments(); track doc.id) {
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <mat-icon [style.color]="getIconColor(doc.extension)" class="me-2">
+                                        {{ getFileIcon(doc.extension) }}
+                                    </mat-icon>
+                                    <div>
+                                        <strong>{{ doc.displayName }}</strong>
+                                        @if (doc.description) {
+                                        <br>
+                                        <small class="text-muted">{{ doc.description }}</small>
+                                        }
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{{ formatSize(doc.size) }}</td>
+                            <td>
+                                <small class="text-muted">{{ doc.permission.userEmail }}</small>
+                            </td>
+                            <td>
+                                <span [class]="'badge ' + getLevelBadge(doc.permission.level)">
+                                    {{ getLevelText(doc.permission.level) }}
+                                </span>
+                                <br>
+                                <app-permission-badge [inherited]="doc.permission.inherited"></app-permission-badge>
+                            </td>
+                            <td>
+                                <span class="badge bg-info">.{{ doc.extension }}</span>
+                            </td>
+                            <td>
+                                <small class="text-muted">
+                                    {{ formatDate(doc.permission.grantedAt) }}
+                                </small>
+                            </td>
+                            <td>
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <button mat-icon-button color="primary" (click)="openDocument(doc)"
+                                        [disabled]="!canView(doc)"
+                                        [matTooltip]="canEdit(doc) ? 'Abrir y editar' : 'Ver documento'">
+                                        <mat-icon>{{ canEdit(doc) ? 'edit' : 'visibility' }}</mat-icon>
+                                    </button>
+
+                                    @if (canEdit(doc)) {
+                                    <button mat-icon-button color="accent" matTooltip="Descargar">
+                                        <mat-icon>download</mat-icon>
+                                    </button>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            } @else {
+            <div class="text-center py-5">
+                <mat-icon style="font-size: 64px; width: 64px; height: 64px; color: #9E9E9E;">
+                    folder_shared
+                </mat-icon>
+                <p class="text-muted mt-3">
+                    No tienes documentos compartidos aún
+                </p>
+                <small class="text-muted">
+                    Cuando otros usuarios compartan documentos contigo, aparecerán aquí
+                </small>
+            </div>
+            }
+        </mat-card-content>
+    </mat-card>
+</div>

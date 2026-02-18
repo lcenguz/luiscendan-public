@@ -1,0 +1,40 @@
+# ===================================
+# CONFIGURACIÓN LOCAL - API KEYS
+# ===================================
+# IMPORTANTE: Este archivo NO se sube a Git (.gitignore)
+# Copia este archivo y renómbralo a: application-local.properties
+
+# ===================================
+# API KEYS - CONFIGURA AQUÍ TUS KEYS
+# ===================================
+
+# Proveedor de IA a usar (openai, gemini, claude)
+ai.provider=gemini
+
+# Google Gemini (RECOMENDADO - GRATIS)
+# Obtén tu key en: https://makersuite.google.com/app/apikey
+ai.gemini.api-key=PON_TU_KEY_DE_GEMINI_AQUI
+
+# OpenAI GPT-4 (Requiere pago)
+# Obtén tu key en: https://platform.openai.com/api-keys
+ai.openai.api-key=PON_TU_KEY_DE_OPENAI_AQUI
+
+# Anthropic Claude (Alternativa)
+# Obtén tu key en: https://console.anthropic.com/
+ai.claude.api-key=PON_TU_KEY_DE_CLAUDE_AQUI
+
+# ===================================
+# INSTRUCCIONES:
+# ===================================
+# 1. Renombra este archivo a: application-local.properties
+# 2. Reemplaza "PON_TU_KEY_AQUI" con tu API key real
+# 3. Guarda el archivo
+# 4. ¡Listo! El backend usará estas configuraciones
+
+# ===================================
+# SEGURIDAD:
+# ===================================
+# ✅ Este archivo está en .gitignore (NO se sube a Git)
+# ✅ Solo existe en tu computadora
+# ✅ Nadie más puede verlo
+# ❌ NUNCA compartas este archivo

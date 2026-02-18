@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Editar metadatos</h2>
+
+<div mat-dialog-content>
+  <p class="text-muted">
+    Ajusta el nombre visible, la descripción y las etiquetas del documento.
+  </p>
+
+  <mat-form-field appearance="outline" class="w-100 mb-2">
+    <mat-label>Nombre visible</mat-label>
+    <input
+      matInput
+      [(ngModel)]="displayName"
+      placeholder="Nombre que verán los usuarios"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="w-100 mb-2">
+    <mat-label>Descripción</mat-label>
+    <textarea
+      matInput
+      rows="3"
+      [(ngModel)]="description"
+      placeholder="Notas o detalle del documento"
+    ></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="w-100">
+    <mat-label>Tags (separadas por comas)</mat-label>
+    <input
+      matInput
+      [(ngModel)]="tagsText"
+      placeholder="ej: contrato, cliente, 2025"
+    />
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSave()">
+    Guardar
+  </button>
+</div>

@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: shopping_mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: shopping_db
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodata:/data/db
+      - ./mongodb:/practicas
+    networks:
+      - shopping_network
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: shopping_mongo_express
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+      ME_CONFIG_BASICAUTH: false
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+    networks:
+      - shopping_network
+
+  # --- NUEVO: SERVICIO DE LA APLICACIÓN (GRAND SLAM) ---
+  app:
+    build: .
+    container_name: smart_shopping_etl
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+    networks:
+      - shopping_network
+    # Comando por defecto: Ejecutar el ETL de Spark
+    command: python src/etl_spark.py
+
+volumes:
+  mongodata:
+    driver: local
+
+networks:
+  shopping_network:
+    driver: bridge

@@ -1,0 +1,308 @@
+{
+  "version": "5.0",
+  "name": "FootballAnalytics",
+  "description": "Dashboard de Análisis de Fútbol",
+  "pages": [
+    {
+      "name": "Overview",
+      "displayName": "📊 Visión General",
+      "width": 1280,
+      "height": 720,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "width": 300,
+          "height": 150,
+          "config": {
+            "name": "card1",
+            "singleVisual": {
+              "visualType": "card",
+              "projections": {
+                "Values": [
+                  {
+                    "queryRef": "Competitions.Total Competitions"
+                  }
+                ]
+              },
+              "prototypeQuery": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "c",
+                    "Entity": "Competitions"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "x": 340,
+          "y": 20,
+          "width": 300,
+          "height": 150,
+          "config": {
+            "name": "card2",
+            "singleVisual": {
+              "visualType": "card",
+              "projections": {
+                "Values": [
+                  {
+                    "queryRef": "LiveMatches.Total Live Matches"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "x": 660,
+          "y": 20,
+          "width": 300,
+          "height": 150,
+          "config": {
+            "name": "card3",
+            "singleVisual": {
+              "visualType": "card",
+              "projections": {
+                "Values": [
+                  {
+                    "queryRef": "LiveMatches.Total Goals Today"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "x": 20,
+          "y": 190,
+          "width": 600,
+          "height": 500,
+          "config": {
+            "name": "table1",
+            "singleVisual": {
+              "visualType": "tableEx",
+              "projections": {
+                "Values": [
+                  {
+                    "queryRef": "LiveMatches.HomeTeam"
+                  },
+                  {
+                    "queryRef": "LiveMatches.AwayTeam"
+                  },
+                  {
+                    "queryRef": "LiveMatches.HomeGoals"
+                  },
+                  {
+                    "queryRef": "LiveMatches.AwayGoals"
+                  },
+                  {
+                    "queryRef": "LiveMatches.Status"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "x": 640,
+          "y": 190,
+          "width": 620,
+          "height": 500,
+          "config": {
+            "name": "chart1",
+            "singleVisual": {
+              "visualType": "barChart",
+              "projections": {
+                "Category": [
+                  {
+                    "queryRef": "Competitions.Country"
+                  }
+                ],
+                "Y": [
+                  {
+                    "queryRef": "Competitions.Total Competitions"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Standings",
+      "displayName": "📈 Clasificación",
+      "width": 1280,
+      "height": 720,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "width": 1240,
+          "height": 680,
+          "config": {
+            "name": "standingsTable",
+            "singleVisual": {
+              "visualType": "tableEx",
+              "projections": {
+                "Values": [
+                  {
+                    "queryRef": "Standings.Position"
+                  },
+                  {
+                    "queryRef": "Standings.Team"
+                  },
+                  {
+                    "queryRef": "Standings.Played"
+                  },
+                  {
+                    "queryRef": "Standings.Won"
+                  },
+                  {
+                    "queryRef": "Standings.Drawn"
+                  },
+                  {
+                    "queryRef": "Standings.Lost"
+                  },
+                  {
+                    "queryRef": "Standings.GoalsFor"
+                  },
+                  {
+                    "queryRef": "Standings.GoalsAgainst"
+                  },
+                  {
+                    "queryRef": "Standings.GoalDifference"
+                  },
+                  {
+                    "queryRef": "Standings.Points"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Squad",
+      "displayName": "👥 Plantilla",
+      "width": 1280,
+      "height": 720,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "width": 300,
+          "height": 150,
+          "config": {
+            "name": "totalPlayers",
+            "singleVisual": {
+              "visualType": "card",
+              "projections": {
+                "Values": [
+                  {
+                    "queryRef": "Squad.Total Players"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "x": 340,
+          "y": 20,
+          "width": 300,
+          "height": 150,
+          "config": {
+            "name": "avgAge",
+            "singleVisual": {
+              "visualType": "card",
+              "projections": {
+                "Values": [
+                  {
+                    "queryRef": "Squad.Avg Player Age"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "x": 20,
+          "y": 190,
+          "width": 600,
+          "height": 500,
+          "config": {
+            "name": "squadTable",
+            "singleVisual": {
+              "visualType": "tableEx",
+              "projections": {
+                "Values": [
+                  {
+                    "queryRef": "Squad.Number"
+                  },
+                  {
+                    "queryRef": "Squad.Name"
+                  },
+                  {
+                    "queryRef": "Squad.Position"
+                  },
+                  {
+                    "queryRef": "Squad.Age"
+                  },
+                  {
+                    "queryRef": "Squad.Nationality"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "x": 640,
+          "y": 190,
+          "width": 620,
+          "height": 500,
+          "config": {
+            "name": "positionChart",
+            "singleVisual": {
+              "visualType": "pieChart",
+              "projections": {
+                "Category": [
+                  {
+                    "queryRef": "Squad.Position"
+                  }
+                ],
+                "Y": [
+                  {
+                    "queryRef": "Squad.Total Players"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "theme": {
+      "name": "CityPark",
+      "dataColors": [
+        "#1F77B4",
+        "#FF7F0E",
+        "#2CA02C",
+        "#D62728",
+        "#9467BD",
+        "#8C564B",
+        "#E377C2",
+        "#7F7F7F",
+        "#BCBD22",
+        "#17BECF"
+      ]
+    }
+  }
+}

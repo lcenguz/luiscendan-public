@@ -1,0 +1,83 @@
+# ===================================
+# STUDYHUB PRO - .gitignore
+# ===================================
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Database files (if using file-based DB)
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Java / Maven (for backend)
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+*.class
+*.jar
+*.war
+*.ear
+
+# H2 Database files
+backend/data/
+
+# API Keys (NEVER commit these!)
+**/api-keys.txt
+**/secrets.json
+**/.secrets
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Test coverage
+coverage/
+*.lcov
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Documentation builds
+docs/_build/

@@ -1,0 +1,7 @@
+id_producto,nombre,categoria,precio_base,volatilidad,estacionalidad
+1,Leche Entera,Lácteos,1.25,0.08,false
+2,Pan de Molde,Panadería,1.50,0.05,false
+3,Huevos L (12),Huevos,2.80,0.12,true
+4,Aceite de Oliva Virgen Extra,Aceites,6.50,0.15,true
+5,Arroz Redondo,Cereales,1.80,0.06,false
+6,Pechuga de Pollo,Carnes,5.20,0.10,true

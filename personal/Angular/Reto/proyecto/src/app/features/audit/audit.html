@@ -1,0 +1,166 @@
+<mat-card>
+    <mat-card-title>
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <mat-icon class="me-2">history</mat-icon>
+                Registro de Auditoría
+            </div>
+            <div class="btn-group">
+                <button mat-raised-button color="primary" (click)="exportCSV()">
+                    <mat-icon class="me-1">download</mat-icon> CSV
+                </button>
+                <button mat-raised-button color="accent" (click)="exportJSON()">
+                    <mat-icon class="me-1">code</mat-icon> JSON
+                </button>
+            </div>
+        </div>
+    </mat-card-title>
+
+    <mat-card-content>
+        
+        <div class="row g-2 mb-3">
+            <div class="col-md-3">
+                <input type="date" class="form-control form-control-sm" placeholder="Desde"
+                    [value]="filters().startDate || ''" (change)="applyFilter('startDate', $any($event.target).value)">
+            </div>
+            <div class="col-md-3">
+                <input type="date" class="form-control form-control-sm" placeholder="Hasta"
+                    [value]="filters().endDate || ''" (change)="applyFilter('endDate', $any($event.target).value)">
+            </div>
+            <div class="col-md-3">
+                <select class="form-select form-select-sm" [value]="filters().action || ''"
+                    (change)="applyFilter('action', $any($event.target).value)">
+                    <option value="">Todas las acciones</option>
+
+                    <optgroup label="CRUD Básico">
+                        <option value="CREATE">Crear</option>
+                        <option value="UPDATE">Actualizar</option>
+                        <option value="DELETE">Eliminar</option>
+                        <option value="RESTORE">Restaurar</option>
+                    </optgroup>
+
+                    <optgroup label="Archivos">
+                        <option value="UPLOAD">Subir archivo</option>
+                        <option value="DOWNLOAD">Descargar archivo</option>
+                        <option value="VIEW">Ver archivo</option>
+                        <option value="RENAME">Renombrar</option>
+                        <option value="MOVE">Mover</option>
+                    </optgroup>
+
+                    <optgroup label="Estados">
+                        <option value="ARCHIVE">Archivar</option>
+                        <option value="UNARCHIVE">Desarchivar</option>
+                        <option value="TRASH">Mover a papelera</option>
+                        <option value="PERMANENT_DELETE">Eliminación permanente</option>
+                        <option value="EMPTY_TRASH">Vaciar papelera</option>
+                    </optgroup>
+
+                    <optgroup label="Permisos y Compartir">
+                        <option value="SHARE">Compartir</option>
+                        <option value="UNSHARE">Dejar de compartir</option>
+                        <option value="PERMISSION_CHANGE">Cambio de permisos</option>
+                        <option value="PERMISSION_GRANT">Otorgar permiso</option>
+                        <option value="PERMISSION_REVOKE">Revocar permiso</option>
+                    </optgroup>
+
+                    <optgroup label="Autenticación">
+                        <option value="LOGIN">Login exitoso</option>
+                        <option value="LOGOUT">Logout</option>
+                        <option value="LOGIN_FAILED">Login fallido</option>
+                        <option value="SESSION_TIMEOUT">Sesión expirada</option>
+                        <option value="PASSWORD_CHANGE">Cambio de contraseña</option>
+                    </optgroup>
+
+                    <optgroup label="Gestión de Usuarios">
+                        <option value="USER_CREATE">Crear usuario</option>
+                        <option value="USER_UPDATE">Actualizar usuario</option>
+                        <option value="USER_DELETE">Eliminar usuario</option>
+                        <option value="USER_ACTIVATE">Activar usuario</option>
+                        <option value="USER_DEACTIVATE">Desactivar usuario</option>
+                    </optgroup>
+
+                    <optgroup label="Versionado">
+                        <option value="VERSION_CREATE">Crear versión</option>
+                        <option value="VERSION_RESTORE">Restaurar versión</option>
+                    </optgroup>
+
+                    <optgroup label="Búsqueda y Navegación">
+                        <option value="SEARCH">Búsqueda</option>
+                        <option value="NAVIGATE">Navegación</option>
+                    </optgroup>
+
+                    <optgroup label="Exportación">
+                        <option value="EXPORT_CSV">Exportar CSV</option>
+                        <option value="EXPORT_JSON">Exportar JSON</option>
+                    </optgroup>
+
+                    <optgroup label="Notificaciones">
+                        <option value="NOTIFICATION_SEND">Enviar notificación</option>
+                        <option value="NOTIFICATION_READ">Leer notificación</option>
+                        <option value="NOTIFICATION_DELETE">Eliminar notificación</option>
+                    </optgroup>
+
+                    <optgroup label="Acciones Masivas">
+                        <option value="BULK_DELETE">Eliminación masiva</option>
+                        <option value="BULK_RESTORE">Restauración masiva</option>
+                        <option value="BULK_SHARE">Compartir masivo</option>
+                        <option value="BULK_ARCHIVE">Archivado masivo</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-sm btn-outline-secondary w-100" (click)="clearFilters()">
+                    Limpiar filtros
+                </button>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th>Fecha/Hora</th>
+                        <th>Acción</th>
+                        <th>Usuario</th>
+                        <th>Objetivo</th>
+                        <th>IP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (event of filteredEvents(); track event.id) {
+                    <tr>
+                        <td>
+                            <small>{{ formatDate(event.timestamp) }}</small>
+                        </td>
+                        <td>
+                            <mat-icon [class]="getActionColor(event.action)"
+                                style="font-size: 18px; width: 18px; height: 18px;">
+                                {{ getActionIcon(event.action) }}
+                            </mat-icon>
+                            <span class="ms-1">{{ event.action }}</span>
+                        </td>
+                        <td>{{ event.actorName }}</td>
+                        <td>
+                            <span class="badge bg-secondary me-1">{{ event.targetType }}</span>
+                            {{ event.targetName }}
+                        </td>
+                        <td>
+                            <small class="text-muted">{{ event.ipAddress }}</small>
+                        </td>
+                    </tr>
+                    } @empty {
+                    <tr>
+                        <td colspan="5" class="text-center text-muted py-4">
+                            No hay eventos de auditoría
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-2 text-muted">
+            <small>Mostrando {{ filteredEvents().length }} de {{ auditService.events().length }} eventos</small>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>
+    <mat-icon class="title-icon">share</mat-icon>
+    Compartir "{{ data.fileName }}"
+</h2>
+
+<mat-dialog-content>
+    <div class="share-form">
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Seleccionar usuario</mat-label>
+            <mat-select [(ngModel)]="selectedUserId">
+                <mat-option *ngFor="let user of availableUsers" [value]="user.id">
+                    <div class="user-option">
+                        <mat-icon>person</mat-icon>
+                        <span>{{ user.displayName }}</span>
+                        <span class="user-email">({{ user.email }})</span>
+                    </div>
+                </mat-option>
+            </mat-select>
+            <mat-hint>Usuario con quien compartir el archivo</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Nivel de permiso</mat-label>
+            <mat-select [(ngModel)]="selectedPermissionLevel">
+                <mat-option *ngFor="let level of permissionLevels" [value]="level.value">
+                    <div class="permission-option">
+                        <mat-icon>
+                            {{ level.value === 'OWNER' ? 'admin_panel_settings' :
+                            level.value === 'EDIT' ? 'edit' : 'visibility' }}
+                        </mat-icon>
+                        <span>{{ level.label }}</span>
+                    </div>
+                </mat-option>
+            </mat-select>
+            <mat-hint>
+                <span *ngIf="selectedPermissionLevel === 'VIEW'">El usuario solo podrá ver y descargar</span>
+                <span *ngIf="selectedPermissionLevel === 'EDIT'">El usuario podrá ver, descargar y editar</span>
+                <span *ngIf="selectedPermissionLevel === 'OWNER'">El usuario tendrá control total</span>
+            </mat-hint>
+        </mat-form-field>
+
+        <div class="info-box" *ngIf="availableUsers.length === 0">
+            <mat-icon>info</mat-icon>
+            <p>No hay usuarios disponibles para compartir</p>
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button (click)="cancel()">
+        <mat-icon>close</mat-icon>
+        Cancelar
+    </button>
+    <button mat-raised-button color="primary" (click)="share()" [disabled]="!selectedUserId">
+        <mat-icon>share</mat-icon>
+        Compartir
+    </button>
+</mat-dialog-actions>

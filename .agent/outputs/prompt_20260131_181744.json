@@ -1,0 +1,33 @@
+{
+  "subject": {
+    "type": "chibi-style 3D character",
+    "gender": "detected from image",
+    "features": {
+      "hair": "analyzed from uploaded image",
+      "eyes": "large expressive eyes",
+      "expression": "friendly and approachable",
+      "skin": "fair with soft blush",
+      "accessories": []
+    },
+    "outfit": {
+      "top": "casual modern style",
+      "bottom": "comfortable pants",
+      "shoes": "sneakers"
+    }
+  },
+  "art_style": {
+    "type": "3D render / C4D / Octane Render",
+    "aesthetic": "soft claymorphism, smooth textures",
+    "lighting": "soft cinematic lighting",
+    "camera": "full body shot, eye-level"
+  },
+  "environment": {
+    "background": "blurred modern setting",
+    "color_palette": [
+      "pastel pink",
+      "peach",
+      "warm brown",
+      "cream"
+    ]
+  }
+}

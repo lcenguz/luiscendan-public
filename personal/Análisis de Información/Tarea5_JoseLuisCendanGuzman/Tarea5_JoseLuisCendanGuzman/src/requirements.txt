@@ -1,0 +1,28 @@
+# ========== Core Dependencies ==========
+pandas>=2.2.0
+numpy>=2.2.0
+requests>=2.32.0
+beautifulsoup4>=4.13.0
+pymongo>=4.16.0
+
+# ========== Visualization ==========
+matplotlib>=3.10.0
+seaborn>=0.13.0
+
+# ========== Configuration ==========
+python-dotenv>=1.0.0
+pyyaml>=6.0.0
+
+# ========== CLI ==========
+click>=8.1.0
+
+# ========== Date/Time ==========
+python-dateutil>=2.9.0
+pyspark>=3.5.0
+
+# ========== Database Drivers ==========
+pyodbc>=5.0.0
+sqlalchemy>=2.0.0
+
+# ========== Geocoding ==========
+geopy>=2.4.0

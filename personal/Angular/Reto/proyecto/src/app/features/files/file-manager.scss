@@ -1,0 +1,196 @@
+:host {
+  display: block;
+}
+
+mat-card+mat-card {
+  margin-top: 16px;
+}
+
+/* Zona de Drag & Drop */
+.upload-dropzone {
+  border: 2px dashed #bbb;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  background-color: #fafafa;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+
+  &--over {
+    border-color: #1976d2;
+    background-color: #e3f2fd;
+  }
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+/* Pequeños ajustes para la tabla */
+table.table {
+  font-size: 0.9rem;
+
+  th {
+    white-space: nowrap;
+  }
+}
+
+.progress {
+  height: 18px;
+
+  .progress-bar {
+    font-size: 0.7rem;
+  }
+}
+
+// Icono pequeño dentro de badges
+.small-icon {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+
+// Badge de compartido
+.badge.bg-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+// ========== ESTILOS DE CARPETAS ==========
+
+// Breadcrumbs de navegación
+.folder-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 16px;
+
+  .breadcrumb-separator {
+    color: #999;
+    font-size: 18px;
+  }
+
+  .breadcrumb-item {
+    color: #333;
+    font-weight: 500;
+  }
+}
+
+// Sección de carpetas
+.folders-section {
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    color: #333;
+
+    mat-icon {
+      color: #666;
+    }
+  }
+}
+
+// Grid de carpetas
+.folders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+// Tarjeta de carpeta
+.folder-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #2196F3;
+    background: #f5f9ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .folder-icon {
+    mat-icon {
+      font-size: 48px;
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .folder-info {
+    flex: 1;
+    min-width: 0;
+
+    .folder-name {
+      margin: 0 0 4px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .folder-description {
+      margin: 0;
+      font-size: 0.85rem;
+      color: #666;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .folder-actions {
+    display: flex;
+    gap: 4px;
+  }
+}
+
+// Highlight para archivo seleccionado desde Command Palette
+.highlight-file {
+  animation: highlightPulse 2s ease-in-out;
+  background-color: #fff3cd !important;
+  border: 2px solid #ffc107 !important;
+}
+
+@keyframes highlightPulse {
+
+  0%,
+  100% {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  50% {
+    background-color: #fff3cd;
+    border-color: #ffc107;
+  }
+}

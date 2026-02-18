@@ -1,0 +1,235 @@
+Date,Product,Supermarket,Price,ZipCode,Category,Source
+2025-02-06,Leche Entera,GADIS,1.22,15570,Lácteos,generated
+2025-02-06,Leche Entera,MERCADONA,1.13,15570,Lácteos,generated
+2025-02-06,Leche Entera,EROSKI,1.23,15570,Lácteos,generated
+2025-02-06,Pan De Molde,GADIS,1.37,15570,Panadería,generated
+2025-02-06,Pan De Molde,MERCADONA,1.27,15570,Panadería,generated
+2025-02-06,Pan De Molde,EROSKI,1.54,15570,Panadería,generated
+2025-02-06,Huevos L (12),GADIS,2.11,15570,Huevos,generated
+2025-02-06,Huevos L (12),MERCADONA,2.69,15570,Huevos,generated
+2025-02-06,Huevos L (12),EROSKI,3.26,15570,Huevos,generated
+2025-02-06,Aceite De Oliva Virgen Extra,GADIS,7.27,15570,Aceites,generated
+2025-02-06,Aceite De Oliva Virgen Extra,MERCADONA,5.28,15570,Aceites,generated
+2025-02-06,Aceite De Oliva Virgen Extra,EROSKI,6.7,15570,Aceites,generated
+2025-02-06,Arroz Redondo,GADIS,1.74,15570,Cereales,generated
+2025-02-06,Arroz Redondo,MERCADONA,1.72,15570,Cereales,generated
+2025-02-06,Arroz Redondo,EROSKI,1.65,15570,Cereales,generated
+2025-02-06,Pechuga De Pollo,GADIS,5.01,15570,Carnes,generated
+2025-02-06,Pechuga De Pollo,MERCADONA,4.71,15570,Carnes,generated
+2025-02-06,Pechuga De Pollo,EROSKI,5.49,15570,Carnes,generated
+2025-03-08,Leche Entera,GADIS,1.28,15570,Lácteos,generated
+2025-03-08,Leche Entera,MERCADONA,1.17,15570,Lácteos,generated
+2025-03-08,Leche Entera,EROSKI,1.28,15570,Lácteos,generated
+2025-03-08,Pan De Molde,GADIS,1.39,15570,Panadería,generated
+2025-03-08,Pan De Molde,MERCADONA,1.46,15570,Panadería,generated
+2025-03-08,Pan De Molde,EROSKI,1.61,15570,Panadería,generated
+2025-03-08,Huevos L (12),GADIS,2.66,15570,Huevos,generated
+2025-03-08,Huevos L (12),MERCADONA,3.2,15570,Huevos,generated
+2025-03-08,Huevos L (12),EROSKI,3.28,15570,Huevos,generated
+2025-03-08,Aceite De Oliva Virgen Extra,GADIS,5.31,15570,Aceites,generated
+2025-03-08,Aceite De Oliva Virgen Extra,MERCADONA,6.18,15570,Aceites,generated
+2025-03-08,Aceite De Oliva Virgen Extra,EROSKI,6.13,15570,Aceites,generated
+2025-03-08,Arroz Redondo,GADIS,1.62,15570,Cereales,generated
+2025-03-08,Arroz Redondo,MERCADONA,1.91,15570,Cereales,generated
+2025-03-08,Arroz Redondo,EROSKI,1.86,15570,Cereales,generated
+2025-03-08,Pechuga De Pollo,GADIS,4.63,15570,Carnes,generated
+2025-03-08,Pechuga De Pollo,MERCADONA,4.89,15570,Carnes,generated
+2025-03-08,Pechuga De Pollo,EROSKI,6.0,15570,Carnes,generated
+2025-04-07,Leche Entera,GADIS,0.99,15570,Lácteos,generated
+2025-04-07,Leche Entera,MERCADONA,1.3,15570,Lácteos,generated
+2025-04-07,Leche Entera,EROSKI,1.29,15570,Lácteos,generated
+2025-04-07,Pan De Molde,GADIS,1.48,15570,Panadería,generated
+2025-04-07,Pan De Molde,MERCADONA,1.48,15570,Panadería,generated
+2025-04-07,Pan De Molde,EROSKI,1.44,15570,Panadería,generated
+2025-04-07,Huevos L (12),GADIS,2.32,15570,Huevos,generated
+2025-04-07,Huevos L (12),MERCADONA,2.54,15570,Huevos,generated
+2025-04-07,Huevos L (12),EROSKI,3.03,15570,Huevos,generated
+2025-04-07,Aceite De Oliva Virgen Extra,GADIS,7.1,15570,Aceites,generated
+2025-04-07,Aceite De Oliva Virgen Extra,MERCADONA,5.64,15570,Aceites,generated
+2025-04-07,Aceite De Oliva Virgen Extra,EROSKI,6.9,15570,Aceites,generated
+2025-04-07,Arroz Redondo,GADIS,1.77,15570,Cereales,generated
+2025-04-07,Arroz Redondo,MERCADONA,1.82,15570,Cereales,generated
+2025-04-07,Arroz Redondo,EROSKI,1.69,15570,Cereales,generated
+2025-04-07,Pechuga De Pollo,GADIS,5.35,15570,Carnes,generated
+2025-04-07,Pechuga De Pollo,MERCADONA,5.14,15570,Carnes,generated
+2025-04-07,Pechuga De Pollo,EROSKI,5.65,15570,Carnes,generated
+2025-05-07,Leche Entera,GADIS,1.27,15570,Lácteos,generated
+2025-05-07,Leche Entera,MERCADONA,1.13,15570,Lácteos,generated
+2025-05-07,Leche Entera,EROSKI,1.17,15570,Lácteos,generated
+2025-05-07,Pan De Molde,GADIS,1.5,15570,Panadería,generated
+2025-05-07,Pan De Molde,MERCADONA,1.44,15570,Panadería,generated
+2025-05-07,Pan De Molde,EROSKI,1.7,15570,Panadería,generated
+2025-05-07,Huevos L (12),GADIS,2.33,15570,Huevos,generated
+2025-05-07,Huevos L (12),MERCADONA,2.61,15570,Huevos,generated
+2025-05-07,Huevos L (12),EROSKI,2.72,15570,Huevos,generated
+2025-05-07,Aceite De Oliva Virgen Extra,GADIS,3.44,15570,Aceites,generated
+2025-05-07,Aceite De Oliva Virgen Extra,MERCADONA,6.76,15570,Aceites,generated
+2025-05-07,Aceite De Oliva Virgen Extra,EROSKI,6.99,15570,Aceites,generated
+2025-05-07,Arroz Redondo,GADIS,1.71,15570,Cereales,generated
+2025-05-07,Arroz Redondo,MERCADONA,1.77,15570,Cereales,generated
+2025-05-07,Arroz Redondo,EROSKI,1.7,15570,Cereales,generated
+2025-05-07,Pechuga De Pollo,GADIS,5.1,15570,Carnes,generated
+2025-05-07,Pechuga De Pollo,MERCADONA,5.01,15570,Carnes,generated
+2025-05-07,Pechuga De Pollo,EROSKI,4.57,15570,Carnes,generated
+2025-06-06,Leche Entera,GADIS,1.19,15570,Lácteos,generated
+2025-06-06,Leche Entera,MERCADONA,1.17,15570,Lácteos,generated
+2025-06-06,Leche Entera,EROSKI,1.23,15570,Lácteos,generated
+2025-06-06,Pan De Molde,GADIS,1.39,15570,Panadería,generated
+2025-06-06,Pan De Molde,MERCADONA,1.51,15570,Panadería,generated
+2025-06-06,Pan De Molde,EROSKI,1.59,15570,Panadería,generated
+2025-06-06,Huevos L (12),GADIS,3.1,15570,Huevos,generated
+2025-06-06,Huevos L (12),MERCADONA,2.81,15570,Huevos,generated
+2025-06-06,Huevos L (12),EROSKI,2.81,15570,Huevos,generated
+2025-06-06,Aceite De Oliva Virgen Extra,GADIS,5.2,15570,Aceites,generated
+2025-06-06,Aceite De Oliva Virgen Extra,MERCADONA,5.32,15570,Aceites,generated
+2025-06-06,Aceite De Oliva Virgen Extra,EROSKI,6.78,15570,Aceites,generated
+2025-06-06,Arroz Redondo,GADIS,1.65,15570,Cereales,generated
+2025-06-06,Arroz Redondo,MERCADONA,1.78,15570,Cereales,generated
+2025-06-06,Arroz Redondo,EROSKI,1.83,15570,Cereales,generated
+2025-06-06,Pechuga De Pollo,GADIS,4.66,15570,Carnes,generated
+2025-06-06,Pechuga De Pollo,MERCADONA,6.04,15570,Carnes,generated
+2025-06-06,Pechuga De Pollo,EROSKI,5.66,15570,Carnes,generated
+2025-07-06,Leche Entera,GADIS,1.3,15570,Lácteos,generated
+2025-07-06,Leche Entera,MERCADONA,1.14,15570,Lácteos,generated
+2025-07-06,Leche Entera,EROSKI,1.12,15570,Lácteos,generated
+2025-07-06,Pan De Molde,GADIS,1.47,15570,Panadería,generated
+2025-07-06,Pan De Molde,MERCADONA,1.4,15570,Panadería,generated
+2025-07-06,Pan De Molde,EROSKI,1.6,15570,Panadería,generated
+2025-07-06,Huevos L (12),GADIS,2.56,15570,Huevos,generated
+2025-07-06,Huevos L (12),MERCADONA,2.38,15570,Huevos,generated
+2025-07-06,Huevos L (12),EROSKI,2.47,15570,Huevos,generated
+2025-07-06,Aceite De Oliva Virgen Extra,GADIS,4.85,15570,Aceites,generated
+2025-07-06,Aceite De Oliva Virgen Extra,MERCADONA,6.36,15570,Aceites,generated
+2025-07-06,Aceite De Oliva Virgen Extra,EROSKI,6.44,15570,Aceites,generated
+2025-07-06,Arroz Redondo,GADIS,1.74,15570,Cereales,generated
+2025-07-06,Arroz Redondo,MERCADONA,1.8,15570,Cereales,generated
+2025-07-06,Arroz Redondo,EROSKI,1.75,15570,Cereales,generated
+2025-07-06,Pechuga De Pollo,GADIS,4.81,15570,Carnes,generated
+2025-07-06,Pechuga De Pollo,MERCADONA,5.92,15570,Carnes,generated
+2025-07-06,Pechuga De Pollo,EROSKI,4.86,15570,Carnes,generated
+2025-08-05,Leche Entera,GADIS,1.09,15570,Lácteos,generated
+2025-08-05,Leche Entera,MERCADONA,1.31,15570,Lácteos,generated
+2025-08-05,Leche Entera,EROSKI,1.27,15570,Lácteos,generated
+2025-08-05,Pan De Molde,GADIS,1.55,15570,Panadería,generated
+2025-08-05,Pan De Molde,MERCADONA,1.5,15570,Panadería,generated
+2025-08-05,Pan De Molde,EROSKI,1.52,15570,Panadería,generated
+2025-08-05,Huevos L (12),GADIS,2.75,15570,Huevos,generated
+2025-08-05,Huevos L (12),MERCADONA,2.57,15570,Huevos,generated
+2025-08-05,Huevos L (12),EROSKI,3.12,15570,Huevos,generated
+2025-08-05,Aceite De Oliva Virgen Extra,GADIS,4.14,15570,Aceites,generated
+2025-08-05,Aceite De Oliva Virgen Extra,MERCADONA,5.77,15570,Aceites,generated
+2025-08-05,Aceite De Oliva Virgen Extra,EROSKI,7.49,15570,Aceites,generated
+2025-08-05,Arroz Redondo,GADIS,1.92,15570,Cereales,generated
+2025-08-05,Arroz Redondo,MERCADONA,1.74,15570,Cereales,generated
+2025-08-05,Arroz Redondo,EROSKI,1.96,15570,Cereales,generated
+2025-08-05,Pechuga De Pollo,GADIS,5.97,15570,Carnes,generated
+2025-08-05,Pechuga De Pollo,MERCADONA,5.01,15570,Carnes,generated
+2025-08-05,Pechuga De Pollo,EROSKI,4.48,15570,Carnes,generated
+2025-09-04,Leche Entera,GADIS,1.25,15570,Lácteos,generated
+2025-09-04,Leche Entera,MERCADONA,1.21,15570,Lácteos,generated
+2025-09-04,Leche Entera,EROSKI,1.34,15570,Lácteos,generated
+2025-09-04,Pan De Molde,GADIS,1.43,15570,Panadería,generated
+2025-09-04,Pan De Molde,MERCADONA,1.44,15570,Panadería,generated
+2025-09-04,Pan De Molde,EROSKI,1.43,15570,Panadería,generated
+2025-09-04,Huevos L (12),GADIS,2.41,15570,Huevos,generated
+2025-09-04,Huevos L (12),MERCADONA,3.04,15570,Huevos,generated
+2025-09-04,Huevos L (12),EROSKI,2.56,15570,Huevos,generated
+2025-09-04,Aceite De Oliva Virgen Extra,GADIS,6.8,15570,Aceites,generated
+2025-09-04,Aceite De Oliva Virgen Extra,MERCADONA,5.68,15570,Aceites,generated
+2025-09-04,Aceite De Oliva Virgen Extra,EROSKI,6.2,15570,Aceites,generated
+2025-09-04,Arroz Redondo,GADIS,1.65,15570,Cereales,generated
+2025-09-04,Arroz Redondo,MERCADONA,1.68,15570,Cereales,generated
+2025-09-04,Arroz Redondo,EROSKI,1.73,15570,Cereales,generated
+2025-09-04,Pechuga De Pollo,GADIS,4.56,15570,Carnes,generated
+2025-09-04,Pechuga De Pollo,MERCADONA,4.67,15570,Carnes,generated
+2025-09-04,Pechuga De Pollo,EROSKI,5.27,15570,Carnes,generated
+2025-10-04,Leche Entera,GADIS,1.17,15570,Lácteos,generated
+2025-10-04,Leche Entera,MERCADONA,1.2,15570,Lácteos,generated
+2025-10-04,Leche Entera,EROSKI,1.45,15570,Lácteos,generated
+2025-10-04,Pan De Molde,GADIS,1.48,15570,Panadería,generated
+2025-10-04,Pan De Molde,MERCADONA,1.43,15570,Panadería,generated
+2025-10-04,Pan De Molde,EROSKI,1.51,15570,Panadería,generated
+2025-10-04,Huevos L (12),GADIS,2.43,15570,Huevos,generated
+2025-10-04,Huevos L (12),MERCADONA,2.56,15570,Huevos,generated
+2025-10-04,Huevos L (12),EROSKI,2.44,15570,Huevos,generated
+2025-10-04,Aceite De Oliva Virgen Extra,GADIS,4.91,15570,Aceites,generated
+2025-10-04,Aceite De Oliva Virgen Extra,MERCADONA,8.14,15570,Aceites,generated
+2025-10-04,Aceite De Oliva Virgen Extra,EROSKI,9.42,15570,Aceites,generated
+2025-10-04,Arroz Redondo,GADIS,1.73,15570,Cereales,generated
+2025-10-04,Arroz Redondo,MERCADONA,1.52,15570,Cereales,generated
+2025-10-04,Arroz Redondo,EROSKI,1.91,15570,Cereales,generated
+2025-10-04,Pechuga De Pollo,GADIS,4.43,15570,Carnes,generated
+2025-10-04,Pechuga De Pollo,MERCADONA,4.79,15570,Carnes,generated
+2025-10-04,Pechuga De Pollo,EROSKI,6.21,15570,Carnes,generated
+2025-11-03,Leche Entera,GADIS,1.28,15570,Lácteos,generated
+2025-11-03,Leche Entera,MERCADONA,1.38,15570,Lácteos,generated
+2025-11-03,Leche Entera,EROSKI,1.32,15570,Lácteos,generated
+2025-11-03,Pan De Molde,GADIS,1.47,15570,Panadería,generated
+2025-11-03,Pan De Molde,MERCADONA,1.53,15570,Panadería,generated
+2025-11-03,Pan De Molde,EROSKI,1.44,15570,Panadería,generated
+2025-11-03,Huevos L (12),GADIS,2.98,15570,Huevos,generated
+2025-11-03,Huevos L (12),MERCADONA,3.39,15570,Huevos,generated
+2025-11-03,Huevos L (12),EROSKI,2.76,15570,Huevos,generated
+2025-11-03,Aceite De Oliva Virgen Extra,GADIS,9.24,15570,Aceites,generated
+2025-11-03,Aceite De Oliva Virgen Extra,MERCADONA,6.91,15570,Aceites,generated
+2025-11-03,Aceite De Oliva Virgen Extra,EROSKI,7.34,15570,Aceites,generated
+2025-11-03,Arroz Redondo,GADIS,1.73,15570,Cereales,generated
+2025-11-03,Arroz Redondo,MERCADONA,1.88,15570,Cereales,generated
+2025-11-03,Arroz Redondo,EROSKI,1.74,15570,Cereales,generated
+2025-11-03,Pechuga De Pollo,GADIS,5.82,15570,Carnes,generated
+2025-11-03,Pechuga De Pollo,MERCADONA,6.23,15570,Carnes,generated
+2025-11-03,Pechuga De Pollo,EROSKI,7.02,15570,Carnes,generated
+2025-12-03,Leche Entera,GADIS,1.29,15570,Lácteos,generated
+2025-12-03,Leche Entera,MERCADONA,1.21,15570,Lácteos,generated
+2025-12-03,Leche Entera,EROSKI,1.17,15570,Lácteos,generated
+2025-12-03,Pan De Molde,GADIS,1.54,15570,Panadería,generated
+2025-12-03,Pan De Molde,MERCADONA,1.59,15570,Panadería,generated
+2025-12-03,Pan De Molde,EROSKI,1.5,15570,Panadería,generated
+2025-12-03,Huevos L (12),GADIS,3.07,15570,Huevos,generated
+2025-12-03,Huevos L (12),MERCADONA,3.67,15570,Huevos,generated
+2025-12-03,Huevos L (12),EROSKI,3.16,15570,Huevos,generated
+2025-12-03,Aceite De Oliva Virgen Extra,GADIS,8.34,15570,Aceites,generated
+2025-12-03,Aceite De Oliva Virgen Extra,MERCADONA,6.22,15570,Aceites,generated
+2025-12-03,Aceite De Oliva Virgen Extra,EROSKI,7.14,15570,Aceites,generated
+2025-12-03,Arroz Redondo,GADIS,1.68,15570,Cereales,generated
+2025-12-03,Arroz Redondo,MERCADONA,1.74,15570,Cereales,generated
+2025-12-03,Arroz Redondo,EROSKI,1.82,15570,Cereales,generated
+2025-12-03,Pechuga De Pollo,GADIS,6.32,15570,Carnes,generated
+2025-12-03,Pechuga De Pollo,MERCADONA,6.41,15570,Carnes,generated
+2025-12-03,Pechuga De Pollo,EROSKI,6.28,15570,Carnes,generated
+2026-01-02,Leche Entera,GADIS,1.26,15570,Lácteos,generated
+2026-01-02,Leche Entera,MERCADONA,1.22,15570,Lácteos,generated
+2026-01-02,Leche Entera,EROSKI,1.13,15570,Lácteos,generated
+2026-01-02,Pan De Molde,GADIS,1.65,15570,Panadería,generated
+2026-01-02,Pan De Molde,MERCADONA,1.47,15570,Panadería,generated
+2026-01-02,Pan De Molde,EROSKI,1.56,15570,Panadería,generated
+2026-01-02,Huevos L (12),GADIS,2.56,15570,Huevos,generated
+2026-01-02,Huevos L (12),MERCADONA,2.9,15570,Huevos,generated
+2026-01-02,Huevos L (12),EROSKI,2.51,15570,Huevos,generated
+2026-01-02,Aceite De Oliva Virgen Extra,GADIS,5.44,15570,Aceites,generated
+2026-01-02,Aceite De Oliva Virgen Extra,MERCADONA,7.19,15570,Aceites,generated
+2026-01-02,Aceite De Oliva Virgen Extra,EROSKI,5.71,15570,Aceites,generated
+2026-01-02,Arroz Redondo,GADIS,1.83,15570,Cereales,generated
+2026-01-02,Arroz Redondo,MERCADONA,1.91,15570,Cereales,generated
+2026-01-02,Arroz Redondo,EROSKI,1.93,15570,Cereales,generated
+2026-01-02,Pechuga De Pollo,GADIS,4.74,15570,Carnes,generated
+2026-01-02,Pechuga De Pollo,MERCADONA,4.43,15570,Carnes,generated
+2026-01-02,Pechuga De Pollo,EROSKI,5.39,15570,Carnes,generated
+2026-02-01,Leche Entera,GADIS,1.34,15570,Lácteos,generated
+2026-02-01,Leche Entera,MERCADONA,1.29,15570,Lácteos,generated
+2026-02-01,Leche Entera,EROSKI,1.19,15570,Lácteos,generated
+2026-02-01,Pan De Molde,GADIS,1.48,15570,Panadería,generated
+2026-02-01,Pan De Molde,MERCADONA,1.54,15570,Panadería,generated
+2026-02-01,Pan De Molde,EROSKI,1.53,15570,Panadería,generated
+2026-02-01,Huevos L (12),GADIS,2.32,15570,Huevos,generated
+2026-02-01,Huevos L (12),MERCADONA,2.84,15570,Huevos,generated
+2026-02-01,Huevos L (12),EROSKI,2.91,15570,Huevos,generated
+2026-02-01,Aceite De Oliva Virgen Extra,GADIS,6.16,15570,Aceites,generated
+2026-02-01,Aceite De Oliva Virgen Extra,MERCADONA,7.2,15570,Aceites,generated
+2026-02-01,Aceite De Oliva Virgen Extra,EROSKI,6.02,15570,Aceites,generated
+2026-02-01,Arroz Redondo,GADIS,1.71,15570,Cereales,generated
+2026-02-01,Arroz Redondo,MERCADONA,1.82,15570,Cereales,generated
+2026-02-01,Arroz Redondo,EROSKI,2.09,15570,Cereales,generated
+2026-02-01,Pechuga De Pollo,GADIS,5.19,15570,Carnes,generated
+2026-02-01,Pechuga De Pollo,MERCADONA,5.08,15570,Carnes,generated
+2026-02-01,Pechuga De Pollo,EROSKI,4.05,15570,Carnes,generated

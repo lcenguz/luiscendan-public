@@ -1,0 +1,115 @@
+
+================================================================================
+ANÁLISIS: UNIDAD-1. Arquitecturas en la Nube Big Data (teoría complementaria).pdf
+================================================================================
+
+Estadísticas del documento:
+  - Palabras totales: 11,187
+  - Caracteres totales: 80,567
+  - Patrones de IA detectados: 5
+
+🤖 PUNTUACIÓN DE IA: 2.2%
+  ✅ Muy bajo - Probablemente escrito por humanos
+
+────────────────────────────────────────────────────────────────────────────────
+PATRONES DETECTADOS:
+────────────────────────────────────────────────────────────────────────────────
+
+📌 Em Dash Overuse
+   Ocurrencias: 4
+   Puntuación ponderada: 2.0
+   Ejemplos:
+     1. "—"
+        Contexto: ...A medida que los casos de uso se han diversiﬁcado — incluyendo analítica avanzada, inteligencia artiﬁ...
+     2. "—"
+        Contexto: ... real y  consumo simultáneo por múltiples perﬁles — se ha hecho evidente la necesidad de arquitectura...
+     3. "—"
+        Contexto: ...na vez establecidos los principios fund amentales — separación de almacenamiento y computación, model...
+
+📌 Rule Of Three
+   Ocurrencias: 1
+   Puntuación ponderada: 0.5
+   Ejemplos:
+     1. "Learn, Keras, and TensorFlow"
+        Contexto: ... Data   • Hands -On Machine Learning with Scikit -Learn, Keras, and TensorFlow.  Géron, A. (2019). O’Reilly Media.  • Machine Le...
+
+================================================================================
+
+
+================================================================================
+ANÁLISIS: UNIDAD-1. Arquitecturas en la Nube Big Data.pdf
+================================================================================
+
+Estadísticas del documento:
+  - Palabras totales: 2,036
+  - Caracteres totales: 13,782
+  - Patrones de IA detectados: 0
+
+🤖 PUNTUACIÓN DE IA: 0.0%
+  ✅ Muy bajo - Probablemente escrito por humanos
+
+✅ No se detectaron patrones significativos de IA
+
+================================================================================
+
+
+================================================================================
+ANÁLISIS: UNIDAD-2. Servicios en la nube (teoría complementaria).pdf
+================================================================================
+
+Estadísticas del documento:
+  - Palabras totales: 9,488
+  - Caracteres totales: 66,610
+  - Patrones de IA detectados: 0
+
+🤖 PUNTUACIÓN DE IA: 0.0%
+  ✅ Muy bajo - Probablemente escrito por humanos
+
+✅ No se detectaron patrones significativos de IA
+
+================================================================================
+
+
+================================================================================
+ANÁLISIS: UNIDAD-2. Servicios en la Nube-slides.pdf
+================================================================================
+
+Estadísticas del documento:
+  - Palabras totales: 1,520
+  - Caracteres totales: 10,054
+  - Patrones de IA detectados: 0
+
+🤖 PUNTUACIÓN DE IA: 0.0%
+  ✅ Muy bajo - Probablemente escrito por humanos
+
+✅ No se detectaron patrones significativos de IA
+
+================================================================================
+
+
+================================================================================
+ANÁLISIS: UNIDAD-3. Servicios gestionados de Big Data en AWS.pdf
+================================================================================
+
+Estadísticas del documento:
+  - Palabras totales: 845
+  - Caracteres totales: 5,662
+  - Patrones de IA detectados: 0
+
+🤖 PUNTUACIÓN DE IA: 0.0%
+  ✅ Muy bajo - Probablemente escrito por humanos
+
+✅ No se detectaron patrones significativos de IA
+
+================================================================================
+
+
+RESUMEN GENERAL
+================================================================================
+UNIDAD-1. Arquitecturas en la Nube Big Data (teoría complementaria).pdf: 2.2%
+UNIDAD-1. Arquitecturas en la Nube Big Data.pdf: 0.0%
+UNIDAD-2. Servicios en la nube (teoría complementaria).pdf: 0.0%
+UNIDAD-2. Servicios en la Nube-slides.pdf: 0.0%
+UNIDAD-3. Servicios gestionados de Big Data en AWS.pdf: 0.0%
+
+Promedio: 0.4%

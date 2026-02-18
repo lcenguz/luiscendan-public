@@ -1,0 +1,76 @@
+<h2 mat-dialog-title>
+    <mat-icon class="me-2">history</mat-icon>
+    Historial de Versiones: {{ data.fileName }}
+</h2>
+
+<mat-dialog-content>
+    @if (versions.length === 0) {
+    <div class="no-versions">
+        <mat-icon>info</mat-icon>
+        <p>Este archivo no tiene versiones anteriores</p>
+        <small class="text-muted">Las versiones se crean automáticamente al editar metadatos importantes</small>
+    </div>
+    } @else {
+    <table mat-table [dataSource]="versions" class="version-table">
+        
+        <ng-container matColumnDef="version">
+            <th mat-header-cell *matHeaderCellDef>Versión</th>
+            <td mat-cell *matCellDef="let version">
+                <div class="version-badge">
+                    <mat-icon>label</mat-icon>
+                    v{{ version.version }}
+                </div>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="changes">
+            <th mat-header-cell *matHeaderCellDef>Cambios</th>
+            <td mat-cell *matCellDef="let version">
+                <div class="change-info">
+                    <strong>{{ version.displayName }}</strong>
+                    <br>
+                    <small class="text-muted">{{ version.changeDescription }}</small>
+                    @if (version.description) {
+                    <br>
+                    <small class="description">{{ version.description }}</small>
+                    }
+                </div>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>Fecha</th>
+            <td mat-cell *matCellDef="let version">
+                <small>{{ formatDate(version.createdAt) }}</small>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="author">
+            <th mat-header-cell *matHeaderCellDef>Autor</th>
+            <td mat-cell *matCellDef="let version">
+                <div class="author">
+                    <mat-icon class="small-icon">person</mat-icon>
+                    {{ version.createdByName }}
+                </div>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Acciones</th>
+            <td mat-cell *matCellDef="let version">
+                <button mat-icon-button color="primary" (click)="restoreVersion(version)"
+                    matTooltip="Restaurar a esta versión">
+                    <mat-icon>restore</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    }
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button (click)="close()">Cerrar</button>
+</mat-dialog-actions>

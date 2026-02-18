@@ -1,0 +1,133 @@
+<mat-card>
+    <mat-card-title>
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <mat-icon class="me-2">admin_panel_settings</mat-icon>
+                Administración de Usuarios
+            </div>
+            <button mat-raised-button color="primary" (click)="showCreateForm = !showCreateForm">
+                <mat-icon class="me-1">person_add</mat-icon>
+                Nuevo Usuario
+            </button>
+        </div>
+    </mat-card-title>
+
+    <mat-card-subtitle>
+        Total de usuarios: {{ users().length }}
+    </mat-card-subtitle>
+
+    <mat-card-content>
+        
+        @if (showCreateForm) {
+        <div class="mb-4 p-3 border rounded bg-light">
+            <h6>Crear Nuevo Usuario</h6>
+            <div class="row g-2">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="newUser.displayName">
+                </div>
+                <div class="col-md-3">
+                    <input type="email" class="form-control" placeholder="Email" [(ngModel)]="newUser.email">
+                </div>
+                <div class="col-md-2">
+                    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="newUser.password">
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select" [(ngModel)]="newUser.role">
+                        <option value="USER">Usuario</option>
+                        <option value="MANAGER">Manager</option>
+                        <option value="ADMIN">Admin</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-success w-100" (click)="createUser()">
+                        Crear
+                    </button>
+                </div>
+            </div>
+        </div>
+        }
+
+        <div class="table-responsive">
+            <table class="table table-sm align-middle">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Creado</th>
+                        <th>Último Login</th>
+                        <th>Docs</th>
+                        <th>Almacenamiento</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (user of users(); track user.id) {
+                    <tr [class.table-secondary]="!user.isActive">
+                        <td>
+                            <strong>{{ user.displayName }}</strong>
+                            @if (user.id === currentUser()?.id) {
+                            <span class="badge bg-info ms-1">Tú</span>
+                            }
+                        </td>
+                        <td>{{ user.email }}</td>
+                        <td>
+                            <select class="form-select form-select-sm" [ngClass]="{
+                                    'border-danger text-danger': user.role === 'ADMIN',
+                                    'border-warning text-warning': user.role === 'MANAGER',
+                                    'border-primary text-primary': user.role === 'USER'
+                                }" [value]="user.role" (change)="changeRole(user.id, $any($event.target).value)"
+                                [disabled]="user.id === currentUser()?.id">
+                                <option value="USER">Usuario</option>
+                                <option value="MANAGER">Manager</option>
+                                <option value="ADMIN">Admin</option>
+                            </select>
+                        </td>
+                        <td>
+                            @if (user.isActive) {
+                            <span class="badge bg-success">Activo</span>
+                            } @else {
+                            <span class="badge bg-secondary">Inactivo</span>
+                            }
+                            @if (user.loginBlocked) {
+                            <span class="badge bg-danger ms-1">Bloqueado</span>
+                            }
+                        </td>
+                        <td>
+                            <small class="text-muted">{{ formatDate(user.createdAt) }}</small>
+                        </td>
+                        <td>
+                            <small class="text-muted">
+                                {{ user.lastLogin ? formatDate(user.lastLogin) : 'Nunca' }}
+                            </small>
+                        </td>
+                        <td>{{ user.metadata.documentsCount }}</td>
+                        <td>{{ formatBytes(user.metadata.storageUsed) }}</td>
+                        <td>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button mat-icon-button [color]="user.isActive ? 'primary' : 'warn'"
+                                    (click)="toggleActive(user.id)" [disabled]="user.id === currentUser()?.id"
+                                    [matTooltip]="user.isActive ? 'Desactivar' : 'Activar'">
+                                    <mat-icon>{{ user.isActive ? 'check_circle' : 'cancel' }}</mat-icon>
+                                </button>
+
+                                <button mat-icon-button [color]="user.loginBlocked ? 'warn' : 'primary'"
+                                    (click)="toggleBlocked(user.id)" [disabled]="user.id === currentUser()?.id"
+                                    [matTooltip]="user.loginBlocked ? 'Desbloquear' : 'Bloquear'">
+                                    <mat-icon>{{ user.loginBlocked ? 'lock' : 'lock_open' }}</mat-icon>
+                                </button>
+
+                                <button mat-icon-button color="warn" (click)="deleteUser(user)"
+                                    [disabled]="user.id === currentUser()?.id" matTooltip="Eliminar">
+                                    <mat-icon>delete</mat-icon>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,23 @@
+[
+    {
+        "id_supermercado": 1,
+        "nombre": "GADIS",
+        "factor_precio": 0.98,
+        "latitud": 43.518,
+        "longitud": -8.205
+    },
+    {
+        "id_supermercado": 2,
+        "nombre": "MERCADONA",
+        "factor_precio": 1.00,
+        "latitud": 43.521,
+        "longitud": -8.201
+    },
+    {
+        "id_supermercado": 3,
+        "nombre": "EROSKI",
+        "factor_precio": 1.03,
+        "latitud": 43.515,
+        "longitud": -8.210
+    }
+]

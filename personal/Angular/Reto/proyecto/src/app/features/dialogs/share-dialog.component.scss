@@ -1,0 +1,61 @@
+:host {
+    display: block;
+}
+
+.title-icon {
+    vertical-align: middle;
+    margin-right: 8px;
+    color: #1976d2;
+}
+
+.share-form {
+    min-width: 400px;
+    padding: 16px 0;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.user-option,
+.permission-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-email {
+    color: #666;
+    font-size: 0.85em;
+    margin-left: 4px;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: #e3f2fd;
+    border-radius: 4px;
+    border-left: 4px solid #1976d2;
+
+    mat-icon {
+        color: #1976d2;
+    }
+
+    p {
+        margin: 0;
+        color: #1565c0;
+    }
+}
+
+mat-dialog-actions {
+    padding: 16px 24px;
+    margin: 0 -24px -24px -24px;
+    border-top: 1px solid #e0e0e0;
+
+    button {
+        margin-left: 8px;
+    }
+}

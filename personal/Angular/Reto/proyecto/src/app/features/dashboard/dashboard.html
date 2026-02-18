@@ -1,0 +1,213 @@
+<div class="dashboard-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">
+            <mat-icon class="me-2">dashboard</mat-icon>
+            Panel de Control
+        </h2>
+
+        <div class="btn-group" role="group">
+            <button mat-raised-button [color]="timeRange() === 7 ? 'primary' : ''" (click)="setTimeRange(7)">
+                7 días
+            </button>
+            <button mat-raised-button [color]="timeRange() === 30 ? 'primary' : ''" (click)="setTimeRange(30)">
+                30 días
+            </button>
+            <button mat-raised-button [color]="timeRange() === 90 ? 'primary' : ''" (click)="setTimeRange(90)">
+                90 días
+            </button>
+            <button mat-raised-button [color]="timeRange() === null ? 'primary' : ''" (click)="setTimeRange(null)">
+                Todos
+            </button>
+        </div>
+    </div>
+
+    <div class="row g-3 mb-4">
+        
+        <div class="col-md-3">
+            <mat-card class="metric-card">
+                <mat-card-content>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <div class="metric-label">Total Archivos</div>
+                            <div class="metric-value">{{ metrics().files.total }}</div>
+                        </div>
+                        <mat-icon class="metric-icon text-primary">insert_drive_file</mat-icon>
+                    </div>
+                    <div class="metric-detail mt-2">
+                        <span class="badge bg-success me-1">{{ metrics().files.active }} activos</span>
+                        <span class="badge bg-secondary">{{ metrics().files.deleted }} eliminados</span>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <div class="col-md-3">
+            <mat-card class="metric-card">
+                <mat-card-content>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <div class="metric-label">Total Usuarios</div>
+                            <div class="metric-value">{{ metrics().users.total }}</div>
+                        </div>
+                        <mat-icon class="metric-icon text-info">people</mat-icon>
+                    </div>
+                    <div class="metric-detail mt-2">
+                        <span class="badge bg-success me-1">{{ metrics().users.active }} activos</span>
+                        <span class="badge bg-danger">{{ metrics().users.blocked }} bloqueados</span>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <div class="col-md-3">
+            <mat-card class="metric-card">
+                <mat-card-content>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <div class="metric-label">Almacenamiento</div>
+                            <div class="metric-value">{{ formatBytes(metrics().storage.totalBytes) }}</div>
+                        </div>
+                        <mat-icon class="metric-icon text-warning">storage</mat-icon>
+                    </div>
+                    <div class="metric-detail mt-2">
+                        <small>Promedio: {{ formatBytes(metrics().storage.avgPerUser) }}/usuario</small>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <div class="col-md-3">
+            <mat-card class="metric-card">
+                <mat-card-content>
+                    <div class="metric-label">Distribución Roles</div>
+                    <div class="role-distribution mt-2">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger">ADMIN</span>
+                            <strong>{{ metrics().users.admins }}</strong>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-warning">MANAGER</span>
+                            <strong>{{ metrics().users.managers }}</strong>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">USER</span>
+                            <strong>{{ metrics().users.users }}</strong>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="row g-3">
+        
+        <div class="col-md-6">
+            <mat-card>
+                <mat-card-title>
+                    <mat-icon class="me-2">leaderboard</mat-icon>
+                    Top Propietarios de Archivos
+                </mat-card-title>
+                <mat-card-content>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th class="text-end">Archivos</th>
+                                    <th class="text-end">Tamaño</th>
+                                    <th class="text-end">%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (owner of metrics().topOwners; track owner.userId) {
+                                <tr>
+                                    <td>{{ owner.userName }}</td>
+                                    <td class="text-end">{{ owner.count }}</td>
+                                    <td class="text-end">{{ formatBytes(owner.bytes) }}</td>
+                                    <td class="text-end">
+                                        <span class="badge bg-primary">
+                                            {{ getPercentage(owner.count, metrics().files.total) }}%
+                                        </span>
+                                    </td>
+                                </tr>
+                                } @empty {
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted">
+                                        No hay datos disponibles
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <div class="col-md-6">
+            <mat-card>
+                <mat-card-title>
+                    <mat-icon class="me-2">timeline</mat-icon>
+                    Actividad Últimos 7 Días
+                </mat-card-title>
+                <mat-card-content>
+                    <div class="activity-chart">
+                        @for (day of metrics().recentActivity; track day.date) {
+                        <div class="activity-bar-container">
+                            <div class="activity-label">{{ formatDate(day.date) }}</div>
+                            <div class="activity-bar-wrapper">
+                                <div class="activity-bar" [style.width.%]="getPercentage(day.count, 10) * 10"
+                                    [class.active]="day.count > 0">
+                                    @if (day.count > 0) {
+                                    <span class="activity-count">{{ day.count }}</span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+        <div class="col-12">
+            <mat-card>
+                <mat-card-title>
+                    <mat-icon class="me-2">bar_chart</mat-icon>
+                    Estado de Archivos
+                </mat-card-title>
+                <mat-card-content>
+                    <div class="status-bars">
+                        <div class="status-bar-item">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Activos</span>
+                                <strong>{{ metrics().files.active }} ({{ getPercentage(metrics().files.active,
+                                    metrics().files.total) }}%)</strong>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success"
+                                    [style.width.%]="getPercentage(metrics().files.active, metrics().files.total)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="status-bar-item">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Eliminados</span>
+                                <strong>{{ metrics().files.deleted }} ({{ getPercentage(metrics().files.deleted,
+                                    metrics().files.total) }}%)</strong>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-danger"
+                                    [style.width.%]="getPercentage(metrics().files.deleted, metrics().files.total)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

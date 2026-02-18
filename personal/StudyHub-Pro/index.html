@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudyHub Pro - Tu asistente personal de estudio con IA">
+    <title>StudyHub Pro - Asistente Personal de Estudio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="academic-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                <h1>StudyHub<span class="pro-badge">Pro</span></h1>
+            </div>
+        </div>
+
+        <div class="nav-items">
+            <a href="#" class="nav-item active" data-view="dashboard">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item" data-view="agenda">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                <span>Agenda</span>
+            </a>
+
+            <a href="#" class="nav-item" data-view="notes">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                </svg>
+                <span>Notas</span>
+            </a>
+
+            <a href="#" class="nav-item" data-view="ai-assistant">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+                <span>IA Personal</span>
+                <span class="badge">AI</span>
+            </a>
+
+            <a href="#" class="nav-item" data-view="library">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
+                <span>Biblioteca</span>
+            </a>
+
+            <a href="#" class="nav-item" data-view="repositories">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+                <span>Repositorios</span>
+                <span class="badge" style="background: var(--primary);">Git</span>
+            </a>
+
+            <a href="#" class="nav-item" data-view="academic-calendar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                    <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" />
+                </svg>
+                <span>Calendario Académico</span>
+                <span class="badge" style="background: var(--success);">📅</span>
+            </a>
+
+            <a href="#" class="nav-item" data-view="pomodoro">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <span>Pomodoro</span>
+                <span class="badge" style="background: var(--error);">🍅</span>
+            </a>
+
+            <a href="#" class="nav-item" data-view="statistics">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <line x1="18" y1="20" x2="18" y2="10" />
+                    <line x1="12" y1="20" x2="12" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+                <span>Estadísticas</span>
+            </a>
+
+            <a href="#" class="nav-item" data-view="settings">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                        d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m-2 2l-4.2 4.2M23 12h-6m-6 0H5m13.2 5.2l-4.2-4.2m-2-2l-4.2-4.2" />
+                </svg>
+                <span>Configuración</span>
+            </a>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div class="user-avatar">LC</div>
+                <div class="user-info">
+                    <div class="user-name">Luis Cendán</div>
+                    <div class="user-status">Estudiante</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="mainContent">
+        <!-- Dashboard View -->
+        <div class="view active" id="dashboard-view">
+            <div class="view-header">
+                <div>
+                    <h2>Dashboard</h2>
+                    <p class="view-subtitle">Bienvenido de nuevo, Luis 👋</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="refreshBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="23 4 23 10 17 10" />
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                        </svg>
+                        Actualizar
+                    </button>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Stats Cards -->
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-label">Tareas Pendientes</div>
+                        <div class="stat-value" id="pendingTasks">0</div>
+                        <div class="stat-change positive">+2 esta semana</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-label">Notas Totales</div>
+                        <div class="stat-value" id="totalNotes">0</div>
+                        <div class="stat-change positive">+5 este mes</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-label">Horas de Estudio</div>
+                        <div class="stat-value" id="studyHours">0</div>
+                        <div class="stat-change">Esta semana</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-label">Consultas IA</div>
+                        <div class="stat-value" id="aiQueries">0</div>
+                        <div class="stat-change">Hoy</div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions-card">
+                    <h3>Acciones Rápidas</h3>
+                    <div class="quick-actions-grid">
+                        <button class="quick-action" data-action="new-note">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 5v14m-7-7h14" />
+                            </svg>
+                            <span>Nueva Nota</span>
+                        </button>
+                        <button class="quick-action" data-action="new-task">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="9 11 12 14 22 4" />
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                            </svg>
+                            <span>Nueva Tarea</span>
+                        </button>
+                        <button class="quick-action" data-action="ask-ai">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                            </svg>
+                            <span>Preguntar IA</span>
+                        </button>
+                        <button class="quick-action" data-action="upload-file">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="17 8 12 3 7 8" />
+                                <line x1="12" y1="3" x2="12" y2="15" />
+                            </svg>
+                            <span>Subir Archivo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-card">
+                    <h3>Actividad Reciente</h3>
+                    <div class="activity-list" id="recentActivity">
+                        <div class="activity-item">
+                            <div class="activity-icon">📝</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Bienvenido a StudyHub Pro</div>
+                                <div class="activity-time">Hace un momento</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar Widget -->
+                <div class="calendar-widget">
+                    <h3>Calendario</h3>
+                    <div id="miniCalendar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other views will be loaded dynamically -->
+        <div class="view" id="agenda-view"></div>
+        <div class="view" id="notes-view"></div>
+        <div class="view" id="ai-assistant-view"></div>
+        <div class="view" id="library-view"></div>
+        <div class="view" id="repositories-view"></div>
+        <div class="view" id="academic-calendar-view"></div>
+        <div class="view" id="pomodoro-view"></div>
+        <div class="view" id="statistics-view"></div>
+        <div class="view" id="settings-view"></div>
+    </main>
+
+    <!-- Modal Container -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="ai-config.js"></script>
+    <script src="advanced-features.js"></script>
+    <script src="academic-manager.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

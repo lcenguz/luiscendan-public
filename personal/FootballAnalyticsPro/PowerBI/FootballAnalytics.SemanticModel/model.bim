@@ -1,0 +1,170 @@
+{
+  "name": "FootballAnalytics",
+  "compatibilityLevel": 1550,
+  "model": {
+    "culture": "es-ES",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "Competitions",
+        "connectionDetails": {
+          "protocol": "file",
+          "address": {
+            "path": "D:\\PowerBI_Data\\competitions_*.csv"
+          }
+        }
+      },
+      {
+        "type": "structured",
+        "name": "LiveMatches",
+        "connectionDetails": {
+          "protocol": "file",
+          "address": {
+            "path": "D:\\PowerBI_Data\\live_matches_*.csv"
+          }
+        }
+      },
+      {
+        "type": "structured",
+        "name": "TodayMatches",
+        "connectionDetails": {
+          "protocol": "file",
+          "address": {
+            "path": "D:\\PowerBI_Data\\today_matches_*.csv"
+          }
+        }
+      },
+      {
+        "type": "structured",
+        "name": "Standings",
+        "connectionDetails": {
+          "protocol": "file",
+          "address": {
+            "path": "D:\\PowerBI_Data\\standings_*.csv"
+          }
+        }
+      },
+      {
+        "type": "structured",
+        "name": "Squad",
+        "connectionDetails": {
+          "protocol": "file",
+          "address": {
+            "path": "D:\\PowerBI_Data\\squad_*.csv"
+          }
+        }
+      },
+      {
+        "type": "structured",
+        "name": "TeamStats",
+        "connectionDetails": {
+          "protocol": "file",
+          "address": {
+            "path": "D:\\PowerBI_Data\\team_stats_*.csv"
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "Competitions",
+        "columns": [
+          {"name": "ID", "dataType": "int64"},
+          {"name": "Name", "dataType": "string"},
+          {"name": "Country", "dataType": "string"},
+          {"name": "Code", "dataType": "string"},
+          {"name": "Season", "dataType": "int64"},
+          {"name": "Type", "dataType": "string"}
+        ]
+      },
+      {
+        "name": "LiveMatches",
+        "columns": [
+          {"name": "ID", "dataType": "int64"},
+          {"name": "HomeTeam", "dataType": "string"},
+          {"name": "AwayTeam", "dataType": "string"},
+          {"name": "HomeGoals", "dataType": "int64"},
+          {"name": "AwayGoals", "dataType": "int64"},
+          {"name": "Minute", "dataType": "string"},
+          {"name": "Status", "dataType": "string"},
+          {"name": "League", "dataType": "string"}
+        ]
+      },
+      {
+        "name": "TodayMatches",
+        "columns": [
+          {"name": "ID", "dataType": "int64"},
+          {"name": "HomeTeam", "dataType": "string"},
+          {"name": "AwayTeam", "dataType": "string"},
+          {"name": "Time", "dataType": "string"},
+          {"name": "Status", "dataType": "string"},
+          {"name": "League", "dataType": "string"}
+        ]
+      },
+      {
+        "name": "Standings",
+        "columns": [
+          {"name": "Position", "dataType": "int64"},
+          {"name": "Team", "dataType": "string"},
+          {"name": "Played", "dataType": "int64"},
+          {"name": "Won", "dataType": "int64"},
+          {"name": "Drawn", "dataType": "int64"},
+          {"name": "Lost", "dataType": "int64"},
+          {"name": "GoalsFor", "dataType": "int64"},
+          {"name": "GoalsAgainst", "dataType": "int64"},
+          {"name": "GoalDifference", "dataType": "int64"},
+          {"name": "Points", "dataType": "int64"}
+        ]
+      },
+      {
+        "name": "Squad",
+        "columns": [
+          {"name": "Number", "dataType": "int64"},
+          {"name": "Name", "dataType": "string"},
+          {"name": "Position", "dataType": "string"},
+          {"name": "Age", "dataType": "int64"},
+          {"name": "Nationality", "dataType": "string"}
+        ]
+      },
+      {
+        "name": "TeamStats",
+        "columns": [
+          {"name": "Metric", "dataType": "string"},
+          {"name": "Value", "dataType": "string"}
+        ]
+      }
+    ],
+    "measures": [
+      {
+        "name": "Total Competitions",
+        "expression": "COUNTROWS(Competitions)",
+        "formatString": "#,0"
+      },
+      {
+        "name": "Total Live Matches",
+        "expression": "COUNTROWS(LiveMatches)",
+        "formatString": "#,0"
+      },
+      {
+        "name": "Total Goals Today",
+        "expression": "SUM(LiveMatches[HomeGoals]) + SUM(LiveMatches[AwayGoals])",
+        "formatString": "#,0"
+      },
+      {
+        "name": "Avg Goals Per Match",
+        "expression": "DIVIDE([Total Goals Today], [Total Live Matches], 0)",
+        "formatString": "#,0.00"
+      },
+      {
+        "name": "Total Players",
+        "expression": "COUNTROWS(Squad)",
+        "formatString": "#,0"
+      },
+      {
+        "name": "Avg Player Age",
+        "expression": "AVERAGE(Squad[Age])",
+        "formatString": "#,0.0"
+      }
+    ]
+  }
+}

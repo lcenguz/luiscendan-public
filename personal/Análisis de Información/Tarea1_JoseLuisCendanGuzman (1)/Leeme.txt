@@ -1,0 +1,2 @@
+Se generaron 3 archivos .csv (50, 500 y 1000 productos) para la prueba de los algoritmos.
+Para su ejecución, se deben extraer en el mismo repositorio que el archivo .ipynb.

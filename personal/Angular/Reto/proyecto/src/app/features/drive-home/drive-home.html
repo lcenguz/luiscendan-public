@@ -1,0 +1,40 @@
+<div class="home-container">
+  
+  <div class="centered-content">
+
+    <div class="user-info-compact">
+      <h1 class="greeting">{{ getGreeting() }}, <span class="user-name">{{ user?.displayName }}</span></h1>
+      <div class="user-actions">
+        <app-notification-center></app-notification-center>
+        <p class="role-badge">
+          <mat-icon>badge</mat-icon>
+          {{ user?.role === 'ADMIN' ? 'Administrador' : user?.role === 'MANAGER' ? 'Manager' : 'Usuario' }}
+        </p>
+        <button class="btn btn-outline-light btn-sm" (click)="logout()">
+          <i class="bi bi-box-arrow-right"></i> Logout
+        </button>
+      </div>
+      <p class="intro-message">
+        Selecciona una opción para comenzar
+      </p>
+    </div>
+
+    <div class="icons-grid">
+      @for (card of navigationCards(); track card.route) {
+      <div class="icon-card" (click)="navigateTo(card.route)" matRipple>
+        <div class="icon-wrapper">
+          <mat-icon class="big-icon" [style.color]="card.iconColor">
+            {{ card.icon }}
+          </mat-icon>
+          @if (card.badge !== undefined && card.badge > 0) {
+          <span class="icon-badge">{{ card.badge }}</span>
+          }
+        </div>
+        <h3 class="icon-title">{{ card.title }}</h3>
+        <p class="icon-description">{{ card.description }}</p>
+      </div>
+      }
+    </div>
+
+  </div>
+</div>

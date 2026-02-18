@@ -1,0 +1,70 @@
+<div class="command-palette-backdrop" (click)="close()">
+    <div class="command-palette" (click)="$event.stopPropagation()">
+        
+        <div class="search-input-container">
+            <mat-icon class="search-icon">search</mat-icon>
+            <input type="text" class="search-input" placeholder="Buscar documentos, usuarios..." [value]="query()"
+                (input)="onQueryChange($any($event.target).value)" autocomplete="off">
+            <kbd class="shortcut">Esc</kbd>
+        </div>
+
+        <div class="results-container">
+            @if (query().length > 0 && query().length < 2) { <div class="empty-state">
+                <mat-icon>edit</mat-icon>
+                <p>Escribe al menos 2 caracteres...</p>
+        </div>
+        } @else if (query().length >= 2 && flatResults().length === 0) {
+        <div class="empty-state">
+            <mat-icon>search_off</mat-icon>
+            <p>No se encontraron resultados</p>
+        </div>
+        } @else if (flatResults().length > 0) {
+        <div class="results-list">
+            @for (group of getGroupArray(); track group.key) {
+            <div class="result-group">
+                <div class="group-header">{{ group.key }}</div>
+                @for (result of group.results; track result.id) {
+                <div class="result-item" [class.selected]="isSelected(result)" (click)="selectResult(result)"
+                    (mouseenter)="selectedIndexSignal.set(flatResults().indexOf(result))">
+
+                    <mat-icon class="result-icon">
+                        @if (result.type === 'document') {
+                        insert_drive_file
+                        } @else if (result.type === 'user') {
+                        person
+                        } @else {
+                        folder
+                        }
+                    </mat-icon>
+
+                    <div class="result-content">
+                        <div class="result-title">{{ result.title }}</div>
+                        <div class="result-subtitle">{{ result.subtitle }}</div>
+                    </div>
+
+                    @if (isSelected(result)) {
+                    <mat-icon class="selected-icon">keyboard_return</mat-icon>
+                    }
+                </div>
+                }
+            </div>
+            }
+        </div>
+        } @else {
+        <div class="empty-state">
+            <mat-icon>🔍</mat-icon>
+            <p>Empieza a buscar...</p>
+            <small class="text-muted">Documentos, usuarios y más</small>
+        </div>
+        }
+    </div>
+
+    <div class="palette-footer">
+        <div class="shortcuts">
+            <span><kbd>↑</kbd> <kbd>↓</kbd> Navegar</span>
+            <span><kbd>Enter</kbd> Seleccionar</span>
+            <span><kbd>Esc</kbd> Cerrar</span>
+        </div>
+    </div>
+</div>
+</div>

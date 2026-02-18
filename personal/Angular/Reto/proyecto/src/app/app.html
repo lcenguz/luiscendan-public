@@ -1,0 +1,75 @@
+@if (!isHomePage) {
+<nav class="navbar navbar-dark bg-dark px-3">
+  
+  <a class="navbar-brand" routerLink="/drive">
+    <i class="bi bi-house"></i>
+  </a>
+
+  @if (isAuthenticated()) {
+  <a class="btn btn-outline-light btn-sm ms-2" routerLink="/file-manager">
+    <i class="bi bi-folder"></i> Gestor
+  </a>
+  <a class="btn btn-outline-light btn-sm ms-2" routerLink="/shared">
+    <i class="bi bi-folder-symlink"></i> Compartido
+  </a>
+  <a class="btn btn-outline-light btn-sm ms-2" routerLink="/trash">
+    <i class="bi bi-trash"></i> Papelera
+  </a>
+  }
+
+  @if (isAuthenticated() && (currentUser()?.role === 'ADMIN' || currentUser()?.role === 'MANAGER')) {
+  <a class="btn btn-outline-light btn-sm ms-2" routerLink="/dashboard">
+    <i class="bi bi-speedometer2"></i> Dashboard
+  </a>
+  <a class="btn btn-outline-light btn-sm ms-2" routerLink="/audit">
+    <i class="bi bi-clock-history"></i> Auditoría
+  </a>
+  }
+
+  @if (isAuthenticated() && currentUser()?.role === 'ADMIN') {
+  <a class="btn btn-outline-light btn-sm ms-2" routerLink="/admin/users">
+    <i class="bi bi-people"></i> Usuarios
+  </a>
+  }
+
+  <div class="mx-auto">
+    <span class="navbar-text text-white fs-5 fw-bold">
+      {{ currentPageTitle }}
+    </span>
+  </div>
+
+  <div class="d-flex align-items-center text-white gap-2" [class.ms-auto]="!isHomePage" [class.w-100]="isHomePage"
+    [class.justify-content-end]="isHomePage">
+    @if (isAuthenticated()) {
+    
+    <app-notification-center></app-notification-center>
+
+    @if (!isHomePage) {
+    <span class="me-2">
+      {{ currentUser()?.displayName }} ({{ currentUser()?.role }})
+    </span>
+    }
+    <button class="btn btn-outline-light btn-sm" (click)="onLogout()">
+      <i class="bi bi-box-arrow-right"></i> Logout
+    </button>
+    } @else {
+    <a class="btn btn-outline-light btn-sm me-2" routerLink="/login">
+      Login
+    </a>
+    <a class="btn btn-primary btn-sm" routerLink="/register">
+      Registro
+    </a>
+    }
+  </div>
+</nav>
+}
+
+@if (isHomePage) {
+
+<router-outlet></router-outlet>
+} @else {
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+}

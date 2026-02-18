@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "artifacts": [
+    {
+      "report": {
+        "path": "FootballAnalytics.Report"
+      }
+    },
+    {
+      "dataset": {
+        "path": "FootballAnalytics.SemanticModel"
+      }
+    }
+  ]
+}
