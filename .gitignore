@@ -24,3 +24,6 @@ npm-debug.log
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Ficheros personales subidos a los agentes
+.agent/uploads/
